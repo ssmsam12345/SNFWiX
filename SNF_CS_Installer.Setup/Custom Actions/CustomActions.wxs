@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Fragment>
+		<!-- TODO: Put your code here. -->
+    <CustomAction Id="ValidteLicenseandAuth" BinaryKey="SNFSetupCA" DllEntry="ValidteLicenseandAuth" Execute="immediate" Return="check"/>
+    <CustomAction Id="InsertPlatforms" BinaryKey="SNFSetupCA" DllEntry="GenerateMailServersList" Execute="immediate" Return="check"/>
+    <CustomAction Id="SetPlatformProperties" BinaryKey="SNFSetupCA" DllEntry="SetPlatformProperties" Execute="immediate" Return="check"/>
+    <CustomAction Id="LaunchHelpWebPage" BinaryKey="SNFSetupCA" DllEntry="LaunchHelpWebPage" Execute="immediate" Return="ignore"/>
+    <CustomAction Id="InstallSNFService" Property="XYNTSERVICEEXEPATH" ExeCommand=" -i" Return="check" Execute="deferred" Impersonate="no"/>
+    <CustomAction Id="UninstallSNFService" Property="XYNTSERVICEEXEPATH" ExeCommand=" -u" Return="check" Execute="deferred" Impersonate="no"/>
+    <!--<CustomAction Id="DownloadRulebase" BinaryKey="SNFSetupCA" DllEntry="DownloadRulebase" Execute="deferred" Return="check" Impersonate="no"/>-->
+    <CustomAction Id="StartSNFService" Directory="SystemFolder" ExeCommand="NET.exe START &quot;SNFService&quot;" Return="check" Impersonate="no" Execute="deferred"/>
+    <CustomAction Id="StopSNFService" Directory="SystemFolder" ExeCommand="NET.exe STOP &quot;SNFService&quot;" Return="check" Execute="immediate"/>
+
+    <!--<CustomAction Id="DownloadRulebase"  DllEntry="DownloadRulebase" Execute="deferred" Return="check" Impersonate="no"/>-->
+    <CustomAction Id="OpenGBUdbIgnoreList.txt" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+    <!--<util:RestartResource Id="StopSNFService" Path="[#SNFServer.exe]" ServiceName="SNFService"/>-->
+    <CustomAction Id="DownloadRulebase"  Directory="INSTALLFOLDER" ExeCommand="[SystemFolder]cmd.exe /c curl.exe -v &quot;http://www.sortmonster.net/Sniffer/Updates/[LICENSEID].snf &quot; -o  [INSTALLFOLDER][LICENSEID].snf  -S -R -H &quot;Accept-Encoding:gzip&quot; --compressed -u sniffer:ki11sp8m 2>>C:\temp\CurlResult.txt" Execute="deferred" Return="check" />
+    <CustomAction Id="SNF2CheckCA" FileKey="snf2check.exe" ExeCommand=" [LICENSEID].snf [AUTHENTICATION]" Execute="deferred" Return="check"/>
+
+    <CustomAction Id="CheckInternetConnectionCA" BinaryKey="SNFSetupCA" DllEntry="CheckInternetConnection" Execute="immediate" Return="check"/>
+	</Fragment>
+  
+</Wix>

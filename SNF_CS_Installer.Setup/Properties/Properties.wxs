@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<!-- TODO: Put your code here. -->
+    <Property Id="PropsRef" Value="0"/>
+
+    <Property Id="HELPWEBPAGELINK" Value="http://www.armresearch.com/Pricing/Forms/trialForm.jsp"/>
+    <Property Id="IS_LICENSE_AUTH_VALID" Value="0"/>
+    <!--<Property Id="ISICEWARPINSTALLED" Secure="yes"/>-->
+    <Property Id="ISMAILSITEINSTALLED" Secure="yes"/>
+    <Property Id="ISKERIOINSTALLED" Secure="yes"/>
+    <!--<Property Id="ISIMAILINSTALLED" Secure="yes"/>-->
+    <!--<Property Id="ISSMARTERMAILINSTALLED" Secure="yes"/>-->
+    <!--<Property Id="ISALLIGATEINSTALLED" Secure="yes"/>-->
+    <Property Id="ISDECLUDEINSTALLED" Secure="yes"/>
+    <Property Id="ISMXGUARDINSTALLED" Secure="yes"/>
+    <Property Id="ISMINIMIINSTALLED" Secure="yes"/>
+    <Property Id="ISSNF4ALLIGATEINSTALLED" Secure="yes"/>
+    <!--<Property Id="ISMDAEMONINSTALLED" Secure="yes"/>-->
+    <Property Id="SET_FOR_MINIMI_INSTALL" Secure="yes"/>
+    <Property Id="SET_FOR_SNF4ALLIGATE_INSTALL" Secure="yes"/>
+    <Property Id="SELECTEDCASEINDEXFORPLATFORMSCREEN" Secure="yes"/>
+    <Property Id="ICEWARPINSTALLFOLDER" Secure="yes"/>
+    <Property Id="MAILSITEINSTALLFOLDER" Secure="yes"/>
+    <Property Id="KERIOINSTALLFOLDER" Secure="yes"/>
+    <Property Id="IMAILINSTALLFOLDER" Secure="yes"/>
+    <Property Id="SMARTERMAILINSTALLFOLDER" Secure="yes"/>
+    <Property Id="ALLIGATEINSTALLFOLDER" Secure="yes"/>
+    <!--<Property Id="DECLUDEINSTALLFOLDER" Secure="yes"/>-->
+    <Property Id="MXGUARDINSTALLFOLDER" Secure="yes"/>
+    <!--<Property Id="MINIMIINSTALLFOLDER" Secure="yes"/>-->
+    <Property Id="SNF4ALLIGATEINSTALLFOLDER" Secure="yes"/>
+    <!--<Property Id="MDAEMONINSTALLFOLDER" Secure="yes"/>-->
+    <Property Id="SNF_SEARCHFOR_LOCATION_BUTTON" Secure="yes"/>
+    <Property Id="SNF_SEARCHFOR_LOCATION" Secure="yes"/>
+    <Property Id="SNF_SEARCHFOR_LOCATION_BUTTONB" Secure="yes"/>
+    <Property Id="SNF_SEARCHFOR_LOCATIONB" Secure="yes"/>
+    <Property Id="SNFSERVERINSTALLDIR" Secure="yes"/>
+    <Property Id="MESSAGESNIFFERRESTOREDIR" Secure="yes"/>
+    <Property Id="PREVIOUSSNIFFERINSTALLED" Secure="yes"/>
+    <Property Id="ARCHIVESAVAILABLE" Secure="yes"/>
+    <Property Id="OLDVERSIONOFSNIFFER" Secure="yes"/>
+    <Property Id="SHOWTELEMETRYPAGE" Secure="yes"/>
+    <Property Id="SHOWRESTOREOPTIONSPAGE" Secure="yes"/>
+    <Property Id="SHOWARCHIVEOPTIONSPAGE" Secure="yes"/>
+    <Property Id="HANDLEUNINSTALLPAGE" Secure="yes"/>
+    <Property Id="CUSTOMFOLDERNAME" Secure="yes"/>
+    <?if $(var.Configuration) = "Debug"?>
+      <Property Id="LICENSEID" Value="testmode" Secure="yes"/>
+      <Property Id="AUTHENTICATION" Value="setuptestingonly" Secure="yes"/>
+      <!--<Property Id="MSIFASTINSTALL" Value="3"/>-->
+    <?endif?>
+    
+    <Property Id="BASERADIODEFAULT" Secure="yes"/>
+    <Property Id="CURRENTPLATFORMSELECTION" Secure="yes"/>
+    <Property Id="CURRENTUTILITYSELECTION" Secure="yes"/>
+    <Property Id="FINDAPPLICATIONMESSAGE" Secure="yes"/>
+    <Property Id="MISSINGAPPLICATIONNAME" Secure="yes"/>
+    <Property Id="MISSINGAPPLICATIONFOLDER" Secure="yes"/>
+    <Property Id="FIND_EXPLANATION_INFO" Secure="yes"/>
+    <Property Id="LOCALINSTDIR" Secure="yes"/>
+    <Property Id="LOCALSERVDIR" Secure="yes"/>
+    <Property Id="SELECTEDPLATFORM" Secure="yes"/>
+
+  </Fragment>
+</Wix>

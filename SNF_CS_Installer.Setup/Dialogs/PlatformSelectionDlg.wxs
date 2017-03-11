@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <copyright file="WelcomeDlg.wxs" company="Outercurve Foundation">
+    Copyright (c) 2004, Outercurve Foundation.
+    This software is released under Microsoft Reciprocal License (MS-RL).
+    The license and further copyright text can be found in the file
+    LICENSE.TXT at the root directory of the distribution.
+  </copyright>
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <UI>
+            <Dialog Id="PlatformSelectionDlg" Width="370" Height="270" Title="Platform Selection dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+                  <Publish Event="DoAction" Value="SetPlatformProperties" Order="1">1</Publish>
+                  <Publish Property="INSTALLFOLDER" Value="[DECLUDE_INSTALL_FOLDER]SNF" Order="5"><![CDATA[ DECLUDE_INSTALL_FOLDER <> "" AND SELECTEDPLATFORM <> "OTHER"]]></Publish>
+                  <Publish Event="NewDialog" Value="LocatePlatformFolders" Order="10">1</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <!--<Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" TabSkip="no" Text="!(loc.WelcomeDlgBitmap)" />-->
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.LicenseAgreementDlgBannerBitmap)" />
+                <Control Id="Title" Type="Text" X="15" Y="6" Width="270" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer Platforms Screen." />
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="340" Height="15" Transparent="yes" NoPrefix="yes" Text="Please select the platform you will use with Message Sniffer." />
+                <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17"  Text="!(loc.WixUIBack)">
+                  <!--<Publish Event="NewDialog" Value="LocatePlatformFolders" Order="5">1</Publish>-->
+                    <Publish Event="NewDialog" Value="InstallDirDlg" Order="10">1</Publish>
+                </Control>
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+                <Control Id="lstPlatforms" Type="ListBox" Width="160" Height="140" X="173" Y="66" Property="SELECTEDPLATFORM" Sorted="yes" Indirect="no">
+                    <!--<ListBox Property="SELECTEDPLATFORM">
+                        <ListItem Text="Imail w/ Declude Install" Value="1" />
+                        
+                        <ListItem Text="Imail w/MINIMI for SNF" Value="3" />
+                        <ListItem Text="SmarterMail w/ Declude Install" Value="4" />
+                        
+                        <ListItem Text="Alligate Install" Value="6" />
+                        <ListItem Text="IceWarp in ~A.V.~ position" Value="7" />
+                        <ListItem Text="IceWarp As Custom-Filter (y/n)" Value="8" />
+                        <ListItem Text="IceWarp As Custom-Filter (+5)" Value="9" />
+                        
+                        <ListItem Text="MDaemon Install" Value="12" />
+                        <ListItem Text="Default SNF Install / Sniffer Install" Value="13" />
+                        <ListItem Text="Unknown Server - Declude Install" Value="14" />
+                        <ListItem Text="Other (custom/unknown combination)" Value="Other"  />
+                    </ListBox>-->
+                  
+                </Control>
+                <Control Type="Text" Id="txtDescription" Width="152" Height="24" X="10" Y="72" Text="Please select from these available platforms:" />
+            </Dialog>
+        </UI>
+    </Fragment>
+</Wix>

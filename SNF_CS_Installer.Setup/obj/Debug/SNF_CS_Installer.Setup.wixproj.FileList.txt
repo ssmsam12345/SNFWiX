@@ -1,0 +1,6 @@
+C:\Users\magisams\Documents\Visual Studio 2015\Projects\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\bin\Debug\SNFSetup.msi
+C:\Users\magisams\Documents\Visual Studio 2015\Projects\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\bin\Debug\SNFSetup.wixpdb
+D:\MyDocuments\Visual Studio 2015\Projects\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\bin\Debug\SNFSetup.msi
+D:\MyDocuments\Visual Studio 2015\Projects\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\bin\Debug\SNFSetup.wixpdb
+D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\bin\Debug\SNFSetup.msi
+D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\bin\Debug\SNFSetup.wixpdb

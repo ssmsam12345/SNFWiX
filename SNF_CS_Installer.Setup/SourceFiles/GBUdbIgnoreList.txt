@@ -1,0 +1,9 @@
+# List of IPs to Ignore on startup
+# Each IP in this list is set to Ignore in GBUdb when
+# The configuration is loaded.
+# Hash mark on the beginning of a line indicates a comment.
+# Comments after an IP are also ignored.
+# One line per IP. Sorry, no CIDR yet.
+# Be sure to list ALL of your gateways :-)
+
+127.0.0.1	# ignore localhost, of course.

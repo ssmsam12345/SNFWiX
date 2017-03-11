@@ -1,0 +1,2 @@
+SNFClient.exe -shutdown
+

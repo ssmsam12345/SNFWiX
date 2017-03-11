@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <!-- TODO: Put your code here. -->
+        <UI>
+            <Dialog Id="LicenseAuthenticationDlgTwin" Width="370" Height="270" Title="License and Authentication Dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+                    <Publish Event="DoAction" Value="ValidteLicenseandAuth" Order="1">1</Publish>
+                    <Publish Event="NewDialog" Value="FindingRulebaseDlg" Order="3"><![CDATA[ IS_LICENSE_AUTH_VALID ~= "Valid"]]></Publish>
+                    <Publish Event="NewDialog" Value="LicenseAuthenticationDlg" Order="5"><![CDATA[ IS_LICENSE_AUTH_VALID <> "Valid"]]></Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="Back" Type="PushButton" X="180" Y="244" Width="56" Height="17" Text="!(loc.WixUIBack)">
+                    <Publish Event="NewDialog" Value="PlatformSelectionDlg" Order="1">1</Publish>
+                </Control>
+                <!--<Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" TabSkip="no" Text="!(loc.WelcomeDlgBitmap)" />-->
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.LicenseAgreementDlgBannerBitmap)" />
+                <Control Id="Title" Type="Text" X="19" Y="9" Width="268" Height="8" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer License and Authentication  screen" />
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="340" Height="14" Transparent="yes" NoPrefix="yes" Text="Please enter valid License and Authentication to identify yourself" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="2" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+                <Control Type="Text" Id="txtLicense" Width="110" Height="11" X="44" Y="63" Text="Enter License  (8 Characters)" />
+                <Control Type="Edit" Id="edtLicense" Width="126" Height="15" X="46" Y="86" Property="LICENSEID" />
+                <Control Type="Text" Id="txtAuth" Width="147" Height="14" X="203" Y="62" Text="Enter Authentication  (16 Charaters)" />
+                <Control Type="Edit" Id="edtAuth" Width="129" Height="15" X="204" Y="85" Property="AUTHENTICATION" />
+                <Control Type="CheckBox" Id="chkEmailAcctTwin" Width="320" Height="25" X="26" Y="135" CheckBoxValue="1" CheckBoxPropertyRef="EMAILACCOUNT" Text="Select this if you have email accounts that intentionally receive spam.(This will automatically open file for editing email accounts after install.)" />
+                <Control Type="CheckBox" Id="chkGatewaysTwin" Width="320" Height="25" X="26" Y="164" CheckBoxValue="1" CheckBoxPropertyRef="GATEWAY" Text="Select this if you have gateways that need to be entered into the Ignore List. ( This will automatically open a file for editing Gateway IP's after install. )" />
+                <Control Type="PushButton" Id="btnHelpWebPage" Width="311" Height="17" X="27" Y="206" Text="Help! I don't have a license key. Do you have a webpage to help me?">
+                  <Publish Event="DoAction" Value="LaunchHelpWebPage">1</Publish>
+                </Control>
+                <!--<Control Type="PushButton" Id="btnHelpWebpage" Width="332" Height="17" X="28" Y="199" Text="Help! I don't have a license key. Do you have a webpage to help me?" />-->
+            </Dialog>
+        </UI>
+    </Fragment>
+</Wix>

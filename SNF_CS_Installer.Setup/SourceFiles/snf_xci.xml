@@ -1,0 +1,52 @@
+<!-- SNF Xml Command Interface Examples -->
+<!-- Scanner -->
+<snf><xci><scanner><scan file='filepath'/></scanner></xci></snf>
+<snf><xci><scanner><result code='63'/></scanner></xci></snf>
+
+<snf><xci><scanner><scan file='filepath' xhdr='yes' log='no' ip='12.34.56.78'/></scanner></xci></snf>
+<snf><xci><scanner><result code='63'><xhdr>
+X-Signature-Violations:
+    57-1404199-965-976-m
+    57-1404199-1352-1363-m
+    57-1404199-965-976-f
+</xhdr></result></scanner></xci></snf>
+
+<!-- GBUdb -->
+<snf><xci><gbudb><set ip='12.34.56.78' type='good'/></gbudb></xci></snf> <!-- Set flag to good on ip -->
+<snf><xci><gbudb><set ip='12.34.56.78' type='bad'/></gbudb></xci></snf> <!-- Set flag to bad on ip -->
+<snf><xci><gbudb><set ip='12.34.56.78' type='ugly'/></gbudb></xci></snf> <!-- Set flag to ugly on ip -->
+<snf><xci><gbudb><set ip='12.34.56.78' type='ignore'/></gbudb></xci></snf> <!-- Set flag to ignore on ip -->
+<snf><xci><gbudb><set ip='12.34.56.78' type='ugly' b='1' g='0'/></gbudb></xci></snf> <!-- Set flag and counts on ip -->
+
+<snf><xci><gbudb><good ip='12.34.56.78'/></gbudb></xci></snf> <!-- Record a "good" event on ip -->
+<snf><xci><gbudb><bad ip='12.34.56.78'/></gbudb></xci></snf> <!-- Record a "bad" event on ip -->
+<snf><xci><gbudb><test ip='12.34.56.78'/></gbudb></xci></snf> <!-- Return the state of ip -->
+<snf><xci><gbudb><drop ip='12.34.56.78'/></gbudb></xci></snf> <!-- Forget the IP -->
+
+<!-- GBUdb Result, always -->
+<snf><xci><gbudb><result ip='12.34.56.78' type='ugly' p='1.0' c='0.001' b='1' g='0' range='caution' code='40'/></gbudb></xci></snf>
+
+<!-- status report request -->
+<snf><xci><report><request><status class='second'/></request></report></xci></snf>
+
+<!-- status report result -->
+<snf><xci><report><response><!-- actual status report --></response></report></xcl></snf>
+
+<!-- Server -->
+
+<snf><xci><server><command command='shutdown'/></server></xci></snf>
+<snf><xci><server><response message='shutdown in progress' code='0'/></server></xci></snf>
+
+<!-- Specialized Server Requests -->
+
+<snf><xci><server><command command='systemdefinedcommand'>
+    <system-defined/><command/><elements/>
+</command></server></xci></snf>
+<snf><xci><server><response message='shutdown in progress' code='0'>
+    <system-defined/><response/><elements/>
+</response></server></xci></snf>
+
+<!-- XCI Error Response -->
+
+<snf><xci><error message="What was that?"/></xci></snf>
+

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?define SNFSourceFiles="SourceFiles"?>
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+          <Component Id="_.handshake" Guid="{146E1FC6-381E-4B84-8130-A8DAC8174B17}">
+            <File Id="_.handshake" KeyPath="yes" Source="$(var.SNFSourceFiles)\.handshake" />
+          </Component>
+          <Component Id="_.state" Guid="{D9E3C204-8CA1-4A37-B8EC-F7CDC6CA4B20}">
+            <File Id="_.state" KeyPath="yes" Source="$(var.SNFSourceFiles)\.state" />
+          </Component>
+          <Component Id="AuthenticationProtocol.swf" Guid="{1237F97E-07DA-4D36-A0EA-0819243952E5}">
+            <File Id="AuthenticationProtocol.swf" KeyPath="yes" Source="$(var.SNFSourceFiles)\AuthenticationProtocol.swf" />
+          </Component>
+          <Component Id="ChangeLog.txt" Guid="{0A1B3E57-6B8F-4650-A84C-EC27C1BC910C}">
+            <File Id="ChangeLog.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\ChangeLog.txt" />
+          </Component>
+          <Component Id="curl.exe" Guid="{8BEE2091-CC96-40D3-832A-AEB9D9863F14}">
+            <File Id="curl.exe" KeyPath="yes" Source="$(var.SNFSourceFiles)\curl.exe" />
+          </Component>
+          <Component Id="CURLMANUAL.rtf" Guid="{D10E94E9-8DB2-40CD-B27F-009AD964D836}">
+            <File Id="CURLMANUAL.rtf" KeyPath="yes" Source="$(var.SNFSourceFiles)\CURLMANUAL.rtf" />
+          </Component>
+          <Component Id="CURLREADME.rtf" Guid="{89034854-7D7E-47F0-96C9-6462C99C9836}">
+            <File Id="CURLREADME.rtf" KeyPath="yes" Source="$(var.SNFSourceFiles)\CURLREADME.rtf" />
+          </Component>
+          <Component Id="exchndl.dll" Guid="{B0A5EFD2-E982-40A8-BE1E-C91338EFE26E}">
+            <File Id="exchndl.dll" KeyPath="yes" Source="$(var.SNFSourceFiles)\exchndl.dll" />
+          </Component>
+          <Component Id="GBUdbIgnoreList.txt" Guid="{84F8E970-A4AA-4267-8E2E-A27F3C24559F}">
+            <File Id="GBUdbIgnoreList.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\GBUdbIgnoreList.txt" />
+          </Component>
+          <Component Id="getRulebase.cmd" Guid="{8B5C45CE-DC80-4F32-9C4B-882FBFDE48A6}">
+            <File Id="getRulebase.cmd" KeyPath="yes" Source="$(var.SNFSourceFiles)\getRulebase.cmd" />
+          </Component>
+          <Component Id="getRulebase.txt" Guid="{D363FF44-7839-4977-BB1F-867DFAED40A1}">
+            <File Id="getRulebase.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\getRulebase.txt" />
+          </Component>
+          <Component Id="identity.xml" Guid="{2542ED97-DB8B-41C4-A0EB-1652F27F5BA5}">
+            <File Id="identity.xml" KeyPath="yes" Source="$(var.SNFSourceFiles)\identity.xml" />
+          </Component>
+          <Component Id="InstallInstructions.txt" Guid="{7C00246E-FF19-4814-862A-DAB7EF42116F}">
+            <File Id="InstallInstructions.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\InstallInstructions.txt" />
+          </Component>
+          <Component Id="License.txt" Guid="{3F6D3CF6-62FD-48A4-8085-78EB68564AAF}">
+            <File Id="License.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\License.rtf" />
+          </Component>
+          <Component Id="LocalRoot.txt" Guid="{B6A25EA4-553E-4CD1-B731-5E52D7FAB405}">
+            <File Id="LocalRoot.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\LocalRoot.txt" />
+          </Component>
+          <Component Id="mingwm10.dll" Guid="{7FF784BC-D45C-4157-AD24-7E508D19AC38}">
+            <File Id="mingwm10.dll" KeyPath="yes" Source="$(var.SNFSourceFiles)\mingwm10.dll" />
+          </Component>
+          <Component Id="send_shutdown.cmd" Guid="{97505815-5080-4C90-84D3-B35575384A87}">
+            <File Id="send_shutdown.cmd" KeyPath="yes" Source="$(var.SNFSourceFiles)\send_shutdown.cmd" />
+          </Component>
+          <Component Id="snf2check.exe" Guid="{4EA2E30E-503B-4525-A192-6D0276317127}">
+            <File Id="snf2check.exe" KeyPath="yes" Source="$(var.SNFSourceFiles)\snf2check.exe" />
+          </Component>
+          <Component Id="SNFClient.exe" Guid="{27592D16-3F5A-4A78-8B64-9388F99AC76B}">
+            <File Id="SNFClient.exe" KeyPath="yes" Source="$(var.SNFSourceFiles)\SNFClient.exe" />
+          </Component>
+          <Component Id="SNFClient_readme.txt" Guid="{3B0A94AB-3B22-40E6-94C8-0DDCA608C9DA}">
+            <File Id="SNFClient_readme.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\SNFClient_readme.txt" />
+          </Component>
+          <Component Id="SNFServer.exe" Guid="{69A9235E-4834-4127-A459-F30878A01058}">
+            <File Id="SNFServer.exe" KeyPath="yes" Source="$(var.SNFSourceFiles)\SNFServer.exe" />
+          </Component>
+          <Component Id="SNFServerV3.2.0_E3.2.0.exe" Guid="{CF6526CD-7A79-462B-B2ED-33BB753E225B}">
+            <File Id="SNFServerV3.2.0_E3.2.0.exe" KeyPath="yes" Source="$(var.SNFSourceFiles)\SNFServerV3.2.0-E3.2.0.exe" />
+          </Component>
+          <Component Id="SNFServer_readme.txt" Guid="{7C1AB88F-1018-42D9-B979-EBC1563EC7D0}">
+            <File Id="SNFServer_readme.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\SNFServer_readme.txt" />
+          </Component>
+          <Component Id="snf_engine.xml" Guid="{F6EE29B4-7B14-491F-BFAD-1BFF81252130}">
+            <File Id="snf_engine.xml" KeyPath="yes" Source="$(var.SNFSourceFiles)\snf_engine.xml" />
+          </Component>
+          <Component Id="snf_xci.xml" Guid="{8D023A4C-DA6E-42E0-B4A6-0801DAAAB398}">
+            <File Id="snf_xci.xml" KeyPath="yes" Source="$(var.SNFSourceFiles)\snf_xci.xml" />
+          </Component>
+          <Component Id="XYNTService.exe" Guid="{6B316193-724E-4D14-9EF5-9662A1689F68}">
+            <File Id="XYNTService.exe" KeyPath="yes" Source="$(var.SNFSourceFiles)\XYNTService.exe" />
+            <util:RestartResource Id="StopSNFService" Path="[#XYNTService.exe]" ServiceName="SNFService"/>
+            <RemoveFile Id="RemoveXYNTService.log" Name="*.log" On="uninstall"/>
+          </Component>
+          <Component Id="XYNTService.ini" Guid="{03C0D456-B90C-4A2D-874F-E706858DEAF0}">
+            <File Id="XYNTService.ini" KeyPath="yes" Source="$(var.SNFSourceFiles)\XYNTService.ini" />
+          </Component>
+          <Component Id="XYNTServiceReadMe.txt" Guid="{C0ED5977-AE33-4937-9403-4B2450674095}">
+            <File Id="XYNTServiceReadMe.txt" KeyPath="yes" Source="$(var.SNFSourceFiles)\XYNTServiceReadMe.txt" />
+          </Component>
+        </DirectoryRef>
+      </Fragment>
+      <Fragment>
+        <ComponentGroup Id="SNFComponents">
+          <ComponentRef Id="_.handshake" />
+          <ComponentRef Id="_.state" />
+          <ComponentRef Id="AuthenticationProtocol.swf" />
+          <ComponentRef Id="ChangeLog.txt" />
+          <ComponentRef Id="curl.exe" />
+          <ComponentRef Id="CURLMANUAL.rtf" />
+          <ComponentRef Id="CURLREADME.rtf" />
+          <ComponentRef Id="exchndl.dll" />
+          <ComponentRef Id="GBUdbIgnoreList.txt" />
+          <ComponentRef Id="getRulebase.cmd" />
+          <ComponentRef Id="getRulebase.txt" />
+          <ComponentRef Id="identity.xml" />
+          <ComponentRef Id="InstallInstructions.txt" />
+          <ComponentRef Id="License.txt" />
+          <ComponentRef Id="LocalRoot.txt" />
+          <ComponentRef Id="mingwm10.dll" />
+          <ComponentRef Id="send_shutdown.cmd" />
+          <ComponentRef Id="snf2check.exe" />
+          <ComponentRef Id="SNFClient.exe" />
+          <ComponentRef Id="SNFClient_readme.txt" />
+          <ComponentRef Id="SNFServer.exe" />
+          <ComponentRef Id="SNFServerV3.2.0_E3.2.0.exe" />
+          <ComponentRef Id="SNFServer_readme.txt" />
+          <ComponentRef Id="snf_engine.xml" />
+          <ComponentRef Id="snf_xci.xml" />
+          <ComponentRef Id="XYNTService.exe" />
+          <ComponentRef Id="XYNTService.ini" />
+          <ComponentRef Id="XYNTServiceReadMe.txt" />
+        </ComponentGroup>
+      </Fragment>
+</Wix>

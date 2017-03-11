@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Fragment>
+		<!-- TODO: Put your code here. -->
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="XMLChanges" Guid="{013915CD-C1B1-4FC3-9F05-1A491A5E0D88}">
+        <CreateFolder/>
+        <util:XmlFile Id="licenseid" Action="setValue" File="[#identity.xml]" ElementPath="snf/identity" Name="licenseid" Value="[LICENSEID]"  PreserveModifiedDate="yes" SelectionLanguage="XPath"/>
+        <util:XmlFile Id="Authentication" File="[#identity.xml]" ElementPath="snf/identity" Action="setValue" Name="authentication" Value="[AUTHENTICATION]" PreserveModifiedDate="yes"  SelectionLanguage="XPath"/>
+
+        <util:XmlFile Id="node" File="[#snf_engine.xml]" ElementPath="snf/node" Action="setValue" Name="identity" Value="[INSTALLFOLDER]" PreserveModifiedDate="yes" SelectionLanguage="XPath"/>
+        <util:XmlFile Id="path" File="[#snf_engine.xml]" ElementPath="snf/node/paths" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="log" File="[#snf_engine.xml]" ElementPath="snf/node/paths/log" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="rulebase" File="[#snf_engine.xml]" ElementPath="snf/node/paths/rulebase" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="workspace" File="[#snf_engine.xml]" ElementPath="snf/node/paths/workspace" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        
+      </Component>
+    </DirectoryRef>
+    <Property Id="XMLFILECHANGES" Value="0"/>
+   
+	</Fragment>
+</Wix>

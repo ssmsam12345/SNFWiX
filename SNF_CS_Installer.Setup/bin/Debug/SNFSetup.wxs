@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="{72708A69-BD97-43F7-90CF-5623E82E53FA}" Codepage="1252" Language="1033" Manufacturer="ARM Research LLC" Name="Message Sniffer Server Installer" UpgradeCode="{869F3259-FB5A-476C-B39D-4702DC7D949C}" Version="3.3.0.0">
+        <Package Comments="This installer database contains the logic and data required to install Message Sniffer Server Installer." Compressed="yes" Description="Message Sniffer Server Installer" InstallerVersion="200" Languages="1033" Manufacturer="ARM Research LLC" Platform="x86" />
+        <Binary Id="SNFSetupCA" SourceFile="FILE NOT EXPORTED, USE THE dark.exe -x OPTION TO EXPORT BINARIES" />
+        <CustomAction Id="InsertPlatforms" BinaryKey="SNFSetupCA" DllEntry="GenerateMailServersList" />
+        <CustomAction Id="ValidteLicenseandAuth" BinaryKey="SNFSetupCA" DllEntry="ValidteLicenseandAuth" />
+        <CustomAction Id="SetPLATFORMFOLDER" Property="PLATFORMFOLDER" Value="C:\temp" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="PLATFORMFOLDER" />
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="INSTALLFOLDER" Name="SNF">
+                    <Component Id="_.handshake" Guid="{146E1FC6-381E-4B84-8130-A8DAC8174B17}">
+                        <File Id="_.handshake" Name=".handshake" KeyPath="yes" ShortName="h5dxwmdh.han" DiskId="1" Source="SourceDir\File\_.handshake" />
+                    </Component>
+                    <Component Id="_.state" Guid="{D9E3C204-8CA1-4A37-B8EC-F7CDC6CA4B20}">
+                        <File Id="_.state" Name=".state" KeyPath="yes" ShortName="zscsr_yz.sta" DiskId="1" Source="SourceDir\File\_.state" />
+                    </Component>
+                    <Component Id="AuthenticationProtocol.swf" Guid="{1237F97E-07DA-4D36-A0EA-0819243952E5}">
+                        <File Id="AuthenticationProtocol.swf" Name="AuthenticationProtocol.swf" KeyPath="yes" ShortName="f41inxjv.swf" DiskId="1" Source="SourceDir\File\AuthenticationProtocol.swf" />
+                    </Component>
+                    <Component Id="ChangeLog.txt" Guid="{0A1B3E57-6B8F-4650-A84C-EC27C1BC910C}">
+                        <File Id="ChangeLog.txt" Name="ChangeLog.txt" KeyPath="yes" ShortName="krxchz-z.txt" DiskId="1" Source="SourceDir\File\ChangeLog.txt" />
+                    </Component>
+                    <Component Id="curl.exe" Guid="{8BEE2091-CC96-40D3-832A-AEB9D9863F14}">
+                        <File Id="curl.exe" Name="curl.exe" KeyPath="yes" DiskId="1" Source="SourceDir\File\curl.exe" />
+                    </Component>
+                    <Component Id="CURLMANUAL.rtf" Guid="{D10E94E9-8DB2-40CD-B27F-009AD964D836}">
+                        <File Id="CURLMANUAL.rtf" Name="CURLMANUAL.rtf" KeyPath="yes" ShortName="jmnh6rzy.rtf" DiskId="1" Source="SourceDir\File\CURLMANUAL.rtf" />
+                    </Component>
+                    <Component Id="CURLREADME.rtf" Guid="{89034854-7D7E-47F0-96C9-6462C99C9836}">
+                        <File Id="CURLREADME.rtf" Name="CURLREADME.rtf" KeyPath="yes" ShortName="3tma2q9s.rtf" DiskId="1" Source="SourceDir\File\CURLREADME.rtf" />
+                    </Component>
+                    <Component Id="exchndl.dll" Guid="{B0A5EFD2-E982-40A8-BE1E-C91338EFE26E}">
+                        <File Id="exchndl.dll" Name="exchndl.dll" KeyPath="yes" DiskId="1" Source="SourceDir\File\exchndl.dll" />
+                    </Component>
+                    <Component Id="GBUdbIgnoreList.txt" Guid="{84F8E970-A4AA-4267-8E2E-A27F3C24559F}">
+                        <File Id="GBUdbIgnoreList.txt" Name="GBUdbIgnoreList.txt" KeyPath="yes" ShortName="g2sq6ajj.txt" DiskId="1" Source="SourceDir\File\GBUdbIgnoreList.txt" />
+                    </Component>
+                    <Component Id="getRulebase.cmd" Guid="{8B5C45CE-DC80-4F32-9C4B-882FBFDE48A6}">
+                        <File Id="getRulebase.cmd" Name="getRulebase.cmd" KeyPath="yes" ShortName="i40cu_zw.cmd" DiskId="1" Source="SourceDir\File\getRulebase.cmd" />
+                    </Component>
+                    <Component Id="getRulebase.txt" Guid="{D363FF44-7839-4977-BB1F-867DFAED40A1}">
+                        <File Id="getRulebase.txt" Name="getRulebase.txt" KeyPath="yes" ShortName="cpkyuxkq.txt" DiskId="1" Source="SourceDir\File\getRulebase.txt" />
+                    </Component>
+                    <Component Id="identity.xml" Guid="{2542ED97-DB8B-41C4-A0EB-1652F27F5BA5}">
+                        <File Id="identity.xml" Name="identity.xml" KeyPath="yes" DiskId="1" Source="SourceDir\File\identity.xml" />
+                    </Component>
+                    <Component Id="InstallInstructions.txt" Guid="{7C00246E-FF19-4814-862A-DAB7EF42116F}">
+                        <File Id="InstallInstructions.txt" Name="InstallInstructions.txt" KeyPath="yes" ShortName="tk7nduvg.txt" DiskId="1" Source="SourceDir\File\InstallInstructions.txt" />
+                    </Component>
+                    <Component Id="License.txt" Guid="{3F6D3CF6-62FD-48A4-8085-78EB68564AAF}">
+                        <File Id="License.txt" Name="License.rtf" KeyPath="yes" DiskId="1" Source="SourceDir\File\License.txt" />
+                    </Component>
+                    <Component Id="LocalRoot.txt" Guid="{B6A25EA4-553E-4CD1-B731-5E52D7FAB405}">
+                        <File Id="LocalRoot.txt" Name="LocalRoot.txt" KeyPath="yes" ShortName="xqetgphl.txt" DiskId="1" Source="SourceDir\File\LocalRoot.txt" />
+                    </Component>
+                    <Component Id="mingwm10.dll" Guid="{7FF784BC-D45C-4157-AD24-7E508D19AC38}">
+                        <File Id="mingwm10.dll" Name="mingwm10.dll" KeyPath="yes" DiskId="1" Source="SourceDir\File\mingwm10.dll" />
+                    </Component>
+                    <Component Id="send_shutdown.cmd" Guid="{97505815-5080-4C90-84D3-B35575384A87}">
+                        <File Id="send_shutdown.cmd" Name="send_shutdown.cmd" KeyPath="yes" ShortName="z87mj92p.cmd" DiskId="1" Source="SourceDir\File\send_shutdown.cmd" />
+                    </Component>
+                    <Component Id="snf2check.exe" Guid="{4EA2E30E-503B-4525-A192-6D0276317127}">
+                        <File Id="snf2check.exe" Name="snf2check.exe" KeyPath="yes" ShortName="hmdtdnfa.exe" DiskId="1" Source="SourceDir\File\snf2check.exe" />
+                    </Component>
+                    <Component Id="SNFClient.exe" Guid="{27592D16-3F5A-4A78-8B64-9388F99AC76B}">
+                        <File Id="SNFClient.exe" Name="SNFClient.exe" KeyPath="yes" ShortName="cgk42lfw.exe" DiskId="1" Source="SourceDir\File\SNFClient.exe" />
+                    </Component>
+                    <Component Id="SNFClient_readme.txt" Guid="{3B0A94AB-3B22-40E6-94C8-0DDCA608C9DA}">
+                        <File Id="SNFClient_readme.txt" Name="SNFClient_readme.txt" KeyPath="yes" ShortName="clnsktk1.txt" DiskId="1" Source="SourceDir\File\SNFClient_readme.txt" />
+                    </Component>
+                    <Component Id="SNFServer.exe" Guid="{69A9235E-4834-4127-A459-F30878A01058}">
+                        <File Id="SNFServer.exe" Name="SNFServer.exe" KeyPath="yes" ShortName="kasi8ngv.exe" DiskId="1" Source="SourceDir\File\SNFServer.exe" />
+                    </Component>
+                    <Component Id="SNFServerV3.2.0_E3.2.0.exe" Guid="{CF6526CD-7A79-462B-B2ED-33BB753E225B}">
+                        <File Id="SNFServerV3.2.0_E3.2.0.exe" Name="SNFServerV3.2.0-E3.2.0.exe" KeyPath="yes" ShortName="8ppyx-mx.exe" DiskId="1" Source="SourceDir\File\SNFServerV3.2.0_E3.2.0.exe" />
+                    </Component>
+                    <Component Id="SNFServer_readme.txt" Guid="{7C1AB88F-1018-42D9-B979-EBC1563EC7D0}">
+                        <File Id="SNFServer_readme.txt" Name="SNFServer_readme.txt" KeyPath="yes" ShortName="ikfpmvey.txt" DiskId="1" Source="SourceDir\File\SNFServer_readme.txt" />
+                    </Component>
+                    <Component Id="snf_engine.xml" Guid="{F6EE29B4-7B14-491F-BFAD-1BFF81252130}">
+                        <File Id="snf_engine.xml" Name="snf_engine.xml" KeyPath="yes" ShortName="psmtsihd.xml" DiskId="1" Source="SourceDir\File\snf_engine.xml" />
+                    </Component>
+                    <Component Id="snf_xci.xml" Guid="{8D023A4C-DA6E-42E0-B4A6-0801DAAAB398}">
+                        <File Id="snf_xci.xml" Name="snf_xci.xml" KeyPath="yes" DiskId="1" Source="SourceDir\File\snf_xci.xml" />
+                    </Component>
+                    <Component Id="XYNTService.exe" Guid="{6B316193-724E-4D14-9EF5-9662A1689F68}">
+                        <File Id="XYNTService.exe" Name="XYNTService.exe" KeyPath="yes" ShortName="kdueyngk.exe" DiskId="1" Source="SourceDir\File\XYNTService.exe" />
+                    </Component>
+                    <Component Id="XYNTService.ini" Guid="{03C0D456-B90C-4A2D-874F-E706858DEAF0}">
+                        <File Id="XYNTService.ini" Name="XYNTService.ini" KeyPath="yes" ShortName="yjlcg-ds.ini" DiskId="1" Source="SourceDir\File\XYNTService.ini" />
+                    </Component>
+                    <Component Id="XYNTServiceReadMe.txt" Guid="{C0ED5977-AE33-4937-9403-4B2450674095}">
+                        <File Id="XYNTServiceReadMe.txt" Name="XYNTServiceReadMe.txt" KeyPath="yes" ShortName="p7xsk-mm.txt" DiskId="1" Source="SourceDir\File\XYNTServiceReadMe.txt" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="ProductFeature" Level="1" Title="SNF_CS_Installer.Setup">
+            <ComponentRef Id="_.handshake" />
+            <ComponentRef Id="_.state" />
+            <ComponentRef Id="AuthenticationProtocol.swf" />
+            <ComponentRef Id="ChangeLog.txt" />
+            <ComponentRef Id="curl.exe" />
+            <ComponentRef Id="CURLMANUAL.rtf" />
+            <ComponentRef Id="CURLREADME.rtf" />
+            <ComponentRef Id="exchndl.dll" />
+            <ComponentRef Id="GBUdbIgnoreList.txt" />
+            <ComponentRef Id="getRulebase.cmd" />
+            <ComponentRef Id="getRulebase.txt" />
+            <ComponentRef Id="identity.xml" />
+            <ComponentRef Id="InstallInstructions.txt" />
+            <ComponentRef Id="License.txt" />
+            <ComponentRef Id="LocalRoot.txt" />
+            <ComponentRef Id="mingwm10.dll" />
+            <ComponentRef Id="send_shutdown.cmd" />
+            <ComponentRef Id="snf2check.exe" />
+            <ComponentRef Id="SNFClient.exe" />
+            <ComponentRef Id="SNFClient_readme.txt" />
+            <ComponentRef Id="SNFServer.exe" />
+            <ComponentRef Id="SNFServerV3.2.0_E3.2.0.exe" />
+            <ComponentRef Id="SNFServer_readme.txt" />
+            <ComponentRef Id="snf_engine.xml" />
+            <ComponentRef Id="snf_xci.xml" />
+            <ComponentRef Id="XYNTService.exe" />
+            <ComponentRef Id="XYNTService.ini" />
+            <ComponentRef Id="XYNTServiceReadMe.txt" />
+        </Feature>
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." IgnoreRemoveFailure="yes" Schedule="afterInstallFinalize" />
+        <Media Id="1" Cabinet="cab1.cab" EmbedCab="yes" />
+        <Property Id="ISICEWARPINSTALLED" Value="0">
+            <RegistrySearch Id="ISICEWARPINSTALLED" Root="HKLM" Key="SOFTWARE\IceWarp\Merak Mail Server" Name="InstallDir" Type="directory" />
+        </Property>
+        <Property Id="ALLUSERS" Value="1" />
+        <Property Id="PropsRef" Value="0" />
+        <Property Id="IS_LICENSE_AUTH_VALID" Value="0" />
+        <Property Id="RegistrySearch" Value="0" />
+        <Property Id="ALLIGATEINSTALLFOLDER" Secure="yes" />
+        <Property Id="ARCHIVESAVAILABLE" Secure="yes" />
+        <Property Id="AUTHENTICATION" Secure="yes" />
+        <Property Id="BASERADIODEFAULT" Secure="yes" />
+        <Property Id="CURRENTPLATFORMSELECTION" Secure="yes" />
+        <Property Id="CURRENTUTILITYSELECTION" Secure="yes" />
+        <Property Id="CUSTOMFOLDERNAME" Secure="yes" />
+        <Property Id="FIND_EXPLANATION_INFO" Secure="yes" />
+        <Property Id="FINDAPPLICATIONMESSAGE" Secure="yes" />
+        <Property Id="HANDLEUNINSTALLPAGE" Secure="yes" />
+        <Property Id="ICEWARPINSTALLFOLDER" Secure="yes" />
+        <Property Id="IMAILINSTALLFOLDER" Secure="yes" />
+        <Property Id="ISALLIGATEINSTALLED" Secure="yes">
+            <RegistrySearch Id="ISALLIGATEINSTALLED" Root="HKLM" Key="SOFTWARE\SolidOak\Alligate\Settings" Name="InstallDir" Type="directory" />
+        </Property>
+        <Property Id="ISDECLUDEINSTALLED" Secure="yes" />
+        <Property Id="ISIMAILINSTALLED" Secure="yes" />
+        <Property Id="ISKERIOINSTALLED" Secure="yes" />
+        <Property Id="ISMAILSITEINSTALLED" Secure="yes" />
+        <Property Id="ISMINIMIINSTALLED" Secure="yes" />
+        <Property Id="ISMXGUARDINSTALLED" Secure="yes" />
+        <Property Id="ISSMARTERMAILINSTALLED" Secure="yes">
+            <RegistrySearch Id="ISSMARTERMAILINSTALLED" Root="HKLM" Key="SOFTWARE\SmarterTools\SmarterMail" Name="InstallPath" Type="directory" />
+        </Property>
+        <Property Id="ISSNF4ALLIGATEINSTALLED" Secure="yes" />
+        <Property Id="KERIOINSTALLFOLDER" Secure="yes" />
+        <Property Id="LICENSEID" Secure="yes" />
+        <Property Id="LOCALINSTDIR" Secure="yes" />
+        <Property Id="LOCALSERVDIR" Secure="yes" />
+        <Property Id="MAILSITEINSTALLFOLDER" Secure="yes" />
+        <Property Id="MESSAGESNIFFERRESTOREDIR" Secure="yes" />
+        <Property Id="MINIMIINSTALLFOLDER" Secure="yes">
+            <RegistrySearch Id="MINIMIINSTALLFOLDER" Root="HKLM" Key="SOFTWARE\Ipswitch\IMail\Global" Name="TopDir" Type="directory" />
+        </Property>
+        <Property Id="MISSINGAPPLICATIONFOLDER" Secure="yes" />
+        <Property Id="MISSINGAPPLICATIONNAME" Secure="yes" />
+        <Property Id="MXGUARDINSTALLFOLDER" Secure="yes" />
+        <Property Id="OLDVERSIONOFSNIFFER" Secure="yes" />
+        <Property Id="PREVIOUSSNIFFERINSTALLED" Secure="yes" />
+        <Property Id="SELECTEDCASEINDEXFORPLATFORMSCREEN" Secure="yes" />
+        <Property Id="SELECTEDPLATFORM" Secure="yes" />
+        <Property Id="SENDNAMEVALUE" Secure="yes">
+            <RegistrySearch Id="SENDNAMEVALUE" Root="HKLM" Key="SOFTWARE\Ipswitch\IMail\Global" Name="SendName" Type="raw" />
+        </Property>
+        <Property Id="SET_FOR_MINIMI_INSTALL" Secure="yes" />
+        <Property Id="SET_FOR_SNF4ALLIGATE_INSTALL" Secure="yes" />
+        <Property Id="SHOWARCHIVEOPTIONSPAGE" Secure="yes" />
+        <Property Id="SHOWRESTOREOPTIONSPAGE" Secure="yes" />
+        <Property Id="SHOWTELEMETRYPAGE" Secure="yes" />
+        <Property Id="SMARTERMAILINSTALLFOLDER" Secure="yes" />
+        <Property Id="SNF_SEARCHFOR_LOCATION" Secure="yes" />
+        <Property Id="SNF_SEARCHFOR_LOCATION_BUTTON" Secure="yes" />
+        <Property Id="SNF_SEARCHFOR_LOCATION_BUTTONB" Secure="yes" />
+        <Property Id="SNF_SEARCHFOR_LOCATIONB" Secure="yes" />
+        <Property Id="SNF4ALLIGATEINSTALLFOLDER" Secure="yes" />
+        <Property Id="SNFSERVERINSTALLDIR" Secure="yes" />
+        <Property Id="WIX_DOWNGRADE_DETECTED" Secure="yes" />
+        <Property Id="WIX_UPGRADE_DETECTED" Secure="yes" />
+        <UI>
+            <Dialog Id="PlatformSelectionDlg" X="50" Y="50" Width="370" Height="270" Title="Platform Selection dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Event="NewDialog" Value="LocatePlatformFolders">1</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Text="WixUI_Bmp_Banner" TabSkip="no" Disabled="yes" />
+                <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="&amp;Back" TabSkip="no">
+                    <Publish Event="NewDialog" Value="LocatePlatformFolders">1</Publish>
+                </Control>
+                <Control Id="lstPlatforms" Type="ListBox" X="173" Y="66" Width="160" Height="140" Property="SELECTEDPLATFORM" TabSkip="no" Sorted="yes" />
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="340" Height="15" Text="Please select the platform you will use with Message Sniffer." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="Title" Type="Text" X="15" Y="6" Width="270" Height="15" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer Platforms Screen." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="txtDescription" Type="Text" X="10" Y="72" Width="152" Height="24" Text="Please sekect from these available platforms:" TabSkip="yes" />
+            </Dialog>
+            <Dialog Id="LocatePlatformFolders" X="50" Y="50" Width="370" Height="270" Title="Platform Selection dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Event="NewDialog" Value="InstallDirDlg">5</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Text="WixUI_Bmp_Banner" TabSkip="no" Disabled="yes" />
+                <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="&amp;Back" TabSkip="no">
+                    <Publish Event="NewDialog" Value="InstallDirDlg">1</Publish>
+                </Control>
+                <Control Id="pthPlatformFolder" Type="PathEdit" X="30" Y="150" Width="280" Height="15" Property="PLATFORMFOLDER" TabSkip="no" />
+                <Control Id="btnPlatformFolderBrowse" Type="PushButton" X="311" Y="149" Width="56" Height="17" Text="..." TabSkip="no">
+                    <Publish Property="_BrowseProperty" Value="PLATFORMFOLDER">1</Publish>
+                    <Publish Event="SpawnDialog" Value="BrowseDlg">1</Publish>
+                </Control>
+                <Control Id="pthSNFInstallFolder" Type="PathEdit" X="30" Y="199" Width="280" Height="15" Property="INSTALLFOLDER" TabSkip="no" />
+                <Control Id="btnSNFInstallFolderBrowse" Type="PushButton" X="311" Y="197" Width="56" Height="17" Text="..." TabSkip="no">
+                    <Publish Property="_BrowseProperty" Value="INSTALLFOLDER">1</Publish>
+                    <Publish Event="SpawnDialog" Value="BrowseDlg">1</Publish>
+                </Control>
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="340" Height="15" Text="Please select the platform you will use with Message Sniffer." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="Title" Type="Text" X="15" Y="6" Width="270" Height="15" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer Platforms Screen." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="txtDescription" Type="Text" X="27" Y="60" Width="289" Height="28" Text="You have chosen to install Sniffer under Declude with an Imail configuration.  You will need to confirm the location of the following items:" TabSkip="yes" Sunken="yes" />
+                <Control Id="txtPlatformFound" Type="Text" X="27" Y="110" Width="314" Height="20" Text="Imail was found.  Please confirm the folder for Declude's global.cfg file." TabSkip="yes" />
+                <Control Id="txtSNFInstallDir" Type="Text" X="27" Y="180" Width="332" Height="10" Text="Please confirm/locate the folder you wish Message Sniffer to be installed in." TabSkip="yes" />
+            </Dialog>
+            <Dialog Id="FindingRulebaseDlg" X="50" Y="50" Width="370" Height="270" Title="Finding Rulebase Dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Event="NewDialog" Value="VerifyReadyDlg">WIXUI_DONTVALIDATEPATH OR WIXUI_INSTALLDIR_VALID="1"</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="Back" Type="PushButton" X="180" Y="244" Width="56" Height="17" Text="&amp;Back" TabSkip="no">
+                    <Publish Event="NewDialog" Value="LicenseAuthenticationDlg">1</Publish>
+                </Control>
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Text="WixUI_Bmp_Banner" TabSkip="no" Disabled="yes" />
+                <Control Id="chkDnldRB" Type="CheckBox" X="108" Y="50" Width="10" Height="11" Property="DOWNLOAD" TabSkip="no" />
+                <Control Id="Title" Type="Text" X="19" Y="9" Width="268" Height="8" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer Rulebase detection screen" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="2" TabSkip="yes" Disabled="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="226" Width="370" Height="2" TabSkip="yes" Disabled="yes" />
+                <Control Id="txtRBDetected" Type="Text" X="20" Y="50" Width="75" Height="13" Text="Rulebase detected" TabSkip="yes" />
+                <Control Id="txtDnldRB" Type="Text" X="125" Y="50" Width="211" Height="24" Text="Check if you want to download the newest rulebase. Leave unchecked to use the existing rulebase." TabSkip="yes" />
+                <Control Id="txtDownloadWait" Type="Text" X="23" Y="96" Width="310" Height="14" Text="Please be patient as this may take a few minutes depending upon your bandwidth." TabSkip="yes" />
+                <Control Id="txtInorrectIDorAuth" Type="Text" X="22" Y="115" Width="306" Height="22" Text="If the installer cannot download a rulebase, your LicenseID or Authentication may be entered incorrectly." TabSkip="yes" />
+                <Control Id="txtNote" Type="Text" X="24" Y="148" Width="318" Height="27" Text="Note: You may be so eager to use Message Sniffer that you have attempted to install it before our server could compile your first rulebase." TabSkip="yes" />
+                <Control Id="txtCheckEmail" Type="Text" X="25" Y="182" Width="318" Height="21" Text="If this happens just wait a few minutes or check your email for the update notification to inform you that your first rulebase has been created.  Thank you." TabSkip="yes" />
+                <Control Id="txtRBnotDetetcted" Type="Text" X="20" Y="50" Width="190" Height="17" Text="No Rulebase detected.   { Download is required. }" TabSkip="yes" />
+            </Dialog>
+            <Dialog Id="LicenseAuthenticationDlg" X="50" Y="50" Width="370" Height="270" Title="License and Authentication Dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Event="DoAction" Value="ValidteLicenseandAuth">1</Publish>
+                    <Publish Event="NewDialog" Value="FindingRulebaseDlg">IS_LICENSE_AUTH_VALID ~= "Valid"</Publish>
+                    <Publish Event="NewDialog" Value="LicenseAuthenticationDlgTwin">IS_LICENSE_AUTH_VALID &lt;&gt; "Valid"</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="Back" Type="PushButton" X="180" Y="244" Width="56" Height="17" Text="&amp;Back" TabSkip="no">
+                    <Publish Event="NewDialog" Value="PlatformSelectionDlg">1</Publish>
+                </Control>
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Text="WixUI_Bmp_Banner" TabSkip="no" Disabled="yes" />
+                <Control Id="edtLicense" Type="Edit" X="46" Y="86" Width="126" Height="15" Property="LICENSEID" TabSkip="no" />
+                <Control Id="edtAuth" Type="Edit" X="204" Y="85" Width="129" Height="15" Property="AUTHENTICATION" TabSkip="no" />
+                <Control Id="chkEmailAcct" Type="CheckBox" X="27" Y="135" Width="320" Height="25" Property="EMAILACCOUNT" Text="Select this if you have email accounts that intentionally receive spam.(This will automatically open file for editing email accounts after install.)" CheckBoxValue="1" TabSkip="no" />
+                <Control Id="chkGateways" Type="CheckBox" X="27" Y="164" Width="320" Height="25" Property="GATEWAY" Text="Select this if you have gateways that need to be entered into the Ignore List. ( This will automatically open a file for editing Gateway IP's after install. )" CheckBoxValue="1" TabSkip="no" />
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="340" Height="14" Text="Please enter valid License and Authentication to identify yourself" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="Title" Type="Text" X="19" Y="9" Width="268" Height="8" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer License and Authentication  screen" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="2" TabSkip="yes" Disabled="yes" />
+                <Control Id="txtLicense" Type="Text" X="44" Y="63" Width="110" Height="11" Text="Enter License  (8 Characters)" TabSkip="yes" />
+                <Control Id="txtAuth" Type="Text" X="203" Y="62" Width="147" Height="14" Text="Enter Authentication  (16 Charaters)" TabSkip="yes" />
+            </Dialog>
+            <Dialog Id="LicenseAuthenticationDlgTwin" X="50" Y="50" Width="370" Height="270" Title="License and Authentication Dialog">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Event="DoAction" Value="ValidteLicenseandAuth">1</Publish>
+                    <Publish Event="NewDialog" Value="FindingRulebaseDlg">IS_LICENSE_AUTH_VALID ~= "Valid"</Publish>
+                    <Publish Event="NewDialog" Value="LicenseAuthenticationDlg">IS_LICENSE_AUTH_VALID &lt;&gt; "Valid"</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="Back" Type="PushButton" X="180" Y="244" Width="56" Height="17" Text="&amp;Back" TabSkip="no">
+                    <Publish Event="NewDialog" Value="PlatformSelectionDlg">1</Publish>
+                </Control>
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Text="WixUI_Bmp_Banner" TabSkip="no" Disabled="yes" />
+                <Control Id="edtLicense" Type="Edit" X="46" Y="86" Width="126" Height="15" Property="LICENSEID" TabSkip="no" />
+                <Control Id="edtAuth" Type="Edit" X="204" Y="85" Width="129" Height="15" Property="AUTHENTICATION" TabSkip="no" />
+                <Control Id="chkEmailAcctTwin" Type="CheckBox" X="26" Y="135" Width="320" Height="25" Text="Select this if you have email accounts that intentionally receive spam.(This will automatically open file for editing email accounts after install.)" CheckBoxValue="1" CheckBoxPropertyRef="EMAILACCOUNT" TabSkip="no" />
+                <Control Id="chkGatewaysTwin" Type="CheckBox" X="26" Y="164" Width="320" Height="25" Text="Select this if you have gateways that need to be entered into the Ignore List. ( This will automatically open a file for editing Gateway IP's after install. )" CheckBoxValue="1" CheckBoxPropertyRef="GATEWAY" TabSkip="no" />
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="340" Height="14" Text="Please enter valid License and Authentication to identify yourself" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="Title" Type="Text" X="19" Y="9" Width="268" Height="8" Text="{\WixUI_Font_Title}Welcome to the Message Sniffer License and Authentication  screen" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="2" TabSkip="yes" Disabled="yes" />
+                <Control Id="txtLicense" Type="Text" X="44" Y="63" Width="110" Height="11" Text="Enter License  (8 Characters)" TabSkip="yes" />
+                <Control Id="txtAuth" Type="Text" X="203" Y="62" Width="147" Height="14" Text="Enter Authentication  (16 Charaters)" TabSkip="yes" />
+            </Dialog>
+        </UI>
+        <UIRef Id="WixUI_InstallDir" />
+        <InstallExecuteSequence>
+            <Custom Action="SetPLATFORMFOLDER" After="CostInitialize" />
+        </InstallExecuteSequence>
+        <InstallUISequence>
+            <Custom Action="SetPLATFORMFOLDER" After="CostInitialize" />
+        </InstallUISequence>
+    </Product>
+</Wix>

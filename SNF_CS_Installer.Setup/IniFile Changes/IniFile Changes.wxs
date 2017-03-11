@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<!-- TODO: Put your code here. -->
+    <Component Id="AddLineTo_XYNTService.ini" Guid="{667A1E78-DAD1-4F0C-B5FB-59D39C168CE7}" Directory="INSTALLFOLDER">
+      <CreateFolder/>
+      <IniFile Id="AddLineTo_XYNTService.ini1" Directory="INSTALLFOLDER" Name="XYNTService.ini" Section="Process0" Key="CommandLine" Value="&quot;[#SNFServer.exe]&quot; &quot;[#snf_engine.xml]&quot;" Action="addLine"/>
+      <IniFile Id="AddLineTo_XYNTService.ini2" Directory="INSTALLFOLDER" Name="XYNTService.ini" Section="Process0" Key="WorkingDir" Value="&quot;[INSTALLFOLDER]&quot;" Action="addLine"/>
+    </Component>
+	</Fragment>
+</Wix>

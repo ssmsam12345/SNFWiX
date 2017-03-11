@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Fragment>
+		<!-- TODO: Put your code here. -->
+    <DirectoryRef Id="MessageSniffer">
+      <Component Id="Shortcuts" Guid="{9CB94BDA-0060-4AB6-AA8B-19A25F412692}">
+        <Shortcut Id="InstallInstructions" Target="[#InstallInstructions.txt]" WorkingDirectory="INSTALLFOLDER" Show="normal" Name="InstallInstructions"/>
+        <util:InternetShortcut Id="MessageSniffer" Target="http://kb.armresearch.com/Products/SNFforWindows.jsp"   Name="MessageSniffer"/>
+        <Shortcut Id="UninstallSNF" Name="Uninstall" Description="Uninstalls Message Sniffer Completely" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]"/>
+        <Shortcut Id="GBUdbIgnoreList" Target="[#GBUdbIgnoreList.txt]" WorkingDirectory="INSTALLFOLDER" Show="normal" Name="GBUdbIgnoreList"/>
+        <RemoveFolder Id="RemoveShortcutFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\microneil\MessageSniffer" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+	</Fragment>
+</Wix>

@@ -1,0 +1,1357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wixLibrary version="3.0.2002.0" xmlns="http://schemas.microsoft.com/wix/2006/libraries">
+  <section type="fragment" xmlns="http://schemas.microsoft.com/wix/2006/objects">
+    <table name="CheckBox">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*22">
+        <field>DOWNLOAD</field>
+        <field />
+      </row>
+    </table>
+    <table name="Control">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*7">
+        <field>FindingRulebaseDlg</field>
+        <field>Next</field>
+        <field>PushButton</field>
+        <field>236</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUINext)</field>
+        <field>Cancel</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*10">
+        <field>FindingRulebaseDlg</field>
+        <field>Cancel</field>
+        <field>PushButton</field>
+        <field>304</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUICancel)</field>
+        <field>Back</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*13">
+        <field>FindingRulebaseDlg</field>
+        <field>Back</field>
+        <field>PushButton</field>
+        <field>180</field>
+        <field>244</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUIBack)</field>
+        <field>BannerBitmap</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*17">
+        <field>FindingRulebaseDlg</field>
+        <field>BannerBitmap</field>
+        <field>Bitmap</field>
+        <field>0</field>
+        <field>0</field>
+        <field>370</field>
+        <field>44</field>
+        <field>1</field>
+        <field />
+        <field>!(loc.LicenseAgreementDlgBannerBitmap)</field>
+        <field>chkDnldRB</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*18">
+        <field>FindingRulebaseDlg</field>
+        <field>Title</field>
+        <field>Text</field>
+        <field>19</field>
+        <field>9</field>
+        <field>268</field>
+        <field>8</field>
+        <field>196611</field>
+        <field />
+        <field>{\WixUI_Font_Title}Welcome to the Message Sniffer Rulebase detection screen</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*19">
+        <field>FindingRulebaseDlg</field>
+        <field>BottomLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>226</field>
+        <field>370</field>
+        <field>2</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*20">
+        <field>FindingRulebaseDlg</field>
+        <field>BannerLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>44</field>
+        <field>370</field>
+        <field>2</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*21">
+        <field>FindingRulebaseDlg</field>
+        <field>txtRBDetected</field>
+        <field>Text</field>
+        <field>20</field>
+        <field>50</field>
+        <field>75</field>
+        <field>13</field>
+        <field>3</field>
+        <field />
+        <field>Rulebase detected</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*22">
+        <field>FindingRulebaseDlg</field>
+        <field>chkDnldRB</field>
+        <field>CheckBox</field>
+        <field>108</field>
+        <field>50</field>
+        <field>10</field>
+        <field>11</field>
+        <field>3</field>
+        <field>DOWNLOAD</field>
+        <field />
+        <field>Next</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*23">
+        <field>FindingRulebaseDlg</field>
+        <field>txtDnldRB</field>
+        <field>Text</field>
+        <field>125</field>
+        <field>50</field>
+        <field>211</field>
+        <field>24</field>
+        <field>3</field>
+        <field />
+        <field>Check if you want to download the newest rulebase. Leave unchecked to use the existing rulebase.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*24">
+        <field>FindingRulebaseDlg</field>
+        <field>txtDownloadWait</field>
+        <field>Text</field>
+        <field>23</field>
+        <field>96</field>
+        <field>310</field>
+        <field>14</field>
+        <field>3</field>
+        <field />
+        <field>Please be patient as this may take a few minutes depending upon your bandwidth.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*25">
+        <field>FindingRulebaseDlg</field>
+        <field>txtInorrectIDorAuth</field>
+        <field>Text</field>
+        <field>22</field>
+        <field>115</field>
+        <field>306</field>
+        <field>22</field>
+        <field>3</field>
+        <field />
+        <field>If the installer cannot download a rulebase, your LicenseID or Authentication may be entered incorrectly.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*26">
+        <field>FindingRulebaseDlg</field>
+        <field>txtNote</field>
+        <field>Text</field>
+        <field>24</field>
+        <field>148</field>
+        <field>318</field>
+        <field>27</field>
+        <field>3</field>
+        <field />
+        <field>Note: You may be so eager to use Message Sniffer that you have attempted to install it before our server could compile your first rulebase.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*27">
+        <field>FindingRulebaseDlg</field>
+        <field>txtCheckEmail</field>
+        <field>Text</field>
+        <field>25</field>
+        <field>182</field>
+        <field>318</field>
+        <field>21</field>
+        <field>3</field>
+        <field />
+        <field>If this happens just wait a few minutes or check your email for the update notification to inform you that your first rulebase has been created.  Thank you.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*28">
+        <field>FindingRulebaseDlg</field>
+        <field>txtRBnotDetetcted</field>
+        <field>Text</field>
+        <field>20</field>
+        <field>50</field>
+        <field>190</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>No Rulebase detected.   { Download is required. }</field>
+        <field />
+        <field />
+      </row>
+    </table>
+    <table name="ControlEvent">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*8">
+        <field>FindingRulebaseDlg</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>VerifyReadyDlg</field>
+        <field>WIXUI_DONTVALIDATEPATH OR WIXUI_INSTALLDIR_VALID="1"</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*11">
+        <field>FindingRulebaseDlg</field>
+        <field>Cancel</field>
+        <field>SpawnDialog</field>
+        <field>CancelDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*14">
+        <field>FindingRulebaseDlg</field>
+        <field>Back</field>
+        <field>NewDialog</field>
+        <field>LicenseAuthenticationDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+    </table>
+    <table name="Dialog">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*6">
+        <field>FindingRulebaseDlg</field>
+        <field>50</field>
+        <field>50</field>
+        <field>370</field>
+        <field>270</field>
+        <field>7</field>
+        <field>Finding Rulebase Dialog</field>
+        <field>Next</field>
+        <field>Next</field>
+        <field>Cancel</field>
+      </row>
+    </table>
+    <table name="WixSimpleReference">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*8">
+        <field>Dialog</field>
+        <field>VerifyReadyDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*11">
+        <field>Dialog</field>
+        <field>CancelDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\FindingRulebaseDlg.wxs*14">
+        <field>Dialog</field>
+        <field>LicenseAuthenticationDlg</field>
+      </row>
+    </table>
+  </section>
+  <section type="fragment" xmlns="http://schemas.microsoft.com/wix/2006/objects">
+    <table name="CheckBox">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*35">
+        <field>EMAILACCOUNT</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*36">
+        <field>GATEWAY</field>
+        <field>1</field>
+      </row>
+    </table>
+    <table name="Control">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*14">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Next</field>
+        <field>PushButton</field>
+        <field>236</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUINext)</field>
+        <field>Cancel</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*19">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Cancel</field>
+        <field>PushButton</field>
+        <field>304</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUICancel)</field>
+        <field>Back</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*22">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Back</field>
+        <field>PushButton</field>
+        <field>180</field>
+        <field>244</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUIBack)</field>
+        <field>BannerBitmap</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*26">
+        <field>LicenseAuthenticationDlg</field>
+        <field>BannerBitmap</field>
+        <field>Bitmap</field>
+        <field>0</field>
+        <field>0</field>
+        <field>370</field>
+        <field>44</field>
+        <field>1</field>
+        <field />
+        <field>!(loc.LicenseAgreementDlgBannerBitmap)</field>
+        <field>edtLicense</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*27">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Title</field>
+        <field>Text</field>
+        <field>19</field>
+        <field>9</field>
+        <field>268</field>
+        <field>8</field>
+        <field>196611</field>
+        <field />
+        <field>{\WixUI_Font_Title}Welcome to the Message Sniffer License and Authentication  screen</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*28">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Description</field>
+        <field>Text</field>
+        <field>25</field>
+        <field>23</field>
+        <field>340</field>
+        <field>14</field>
+        <field>196611</field>
+        <field />
+        <field>Please enter valid License and Authentication to identify yourself</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*29">
+        <field>LicenseAuthenticationDlg</field>
+        <field>BottomLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>234</field>
+        <field>370</field>
+        <field>2</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*30">
+        <field>LicenseAuthenticationDlg</field>
+        <field>BannerLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>44</field>
+        <field>370</field>
+        <field>0</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*31">
+        <field>LicenseAuthenticationDlg</field>
+        <field>txtLicense</field>
+        <field>Text</field>
+        <field>44</field>
+        <field>63</field>
+        <field>110</field>
+        <field>11</field>
+        <field>3</field>
+        <field />
+        <field>Enter License  (8 Characters)</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*32">
+        <field>LicenseAuthenticationDlg</field>
+        <field>edtLicense</field>
+        <field>Edit</field>
+        <field>46</field>
+        <field>86</field>
+        <field>126</field>
+        <field>15</field>
+        <field>3</field>
+        <field>LICENSEID</field>
+        <field />
+        <field>edtAuth</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*33">
+        <field>LicenseAuthenticationDlg</field>
+        <field>txtAuth</field>
+        <field>Text</field>
+        <field>203</field>
+        <field>62</field>
+        <field>147</field>
+        <field>14</field>
+        <field>3</field>
+        <field />
+        <field>Enter Authentication  (16 Charaters)</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*34">
+        <field>LicenseAuthenticationDlg</field>
+        <field>edtAuth</field>
+        <field>Edit</field>
+        <field>204</field>
+        <field>85</field>
+        <field>129</field>
+        <field>15</field>
+        <field>3</field>
+        <field>AUTHENTICATION</field>
+        <field />
+        <field>chkEmailAcct</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*35">
+        <field>LicenseAuthenticationDlg</field>
+        <field>chkEmailAcct</field>
+        <field>CheckBox</field>
+        <field>27</field>
+        <field>135</field>
+        <field>320</field>
+        <field>25</field>
+        <field>3</field>
+        <field>EMAILACCOUNT</field>
+        <field>Select this if you have email accounts that intentionally receive spam.(This will automatically open file for editing email accounts after install.)</field>
+        <field>chkGateways</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*36">
+        <field>LicenseAuthenticationDlg</field>
+        <field>chkGateways</field>
+        <field>CheckBox</field>
+        <field>27</field>
+        <field>164</field>
+        <field>320</field>
+        <field>25</field>
+        <field>3</field>
+        <field>GATEWAY</field>
+        <field>Select this if you have gateways that need to be entered into the Ignore List. ( This will automatically open a file for editing Gateway IP's after install. )</field>
+        <field>Next</field>
+        <field />
+      </row>
+    </table>
+    <table name="ControlEvent">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*15">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Next</field>
+        <field>DoAction</field>
+        <field>ValidteLicenseandAuth</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*16">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>FindingRulebaseDlg</field>
+        <field>IS_LICENSE_AUTH_VALID ~= "Valid"</field>
+        <field>3</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*17">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>IS_LICENSE_AUTH_VALID &lt;&gt; "Valid"</field>
+        <field>5</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*20">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Cancel</field>
+        <field>SpawnDialog</field>
+        <field>CancelDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*23">
+        <field>LicenseAuthenticationDlg</field>
+        <field>Back</field>
+        <field>NewDialog</field>
+        <field>PlatformSelectionDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+    </table>
+    <table name="Dialog">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*13">
+        <field>LicenseAuthenticationDlg</field>
+        <field>50</field>
+        <field>50</field>
+        <field>370</field>
+        <field>270</field>
+        <field>7</field>
+        <field>License and Authentication Dialog</field>
+        <field>Next</field>
+        <field>Next</field>
+        <field>Cancel</field>
+      </row>
+    </table>
+    <table name="WixSimpleReference">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*15">
+        <field>CustomAction</field>
+        <field>ValidteLicenseandAuth</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*16">
+        <field>Dialog</field>
+        <field>FindingRulebaseDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*17">
+        <field>Dialog</field>
+        <field>LicenseAuthenticationDlgTwin</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*20">
+        <field>Dialog</field>
+        <field>CancelDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlg.wxs*23">
+        <field>Dialog</field>
+        <field>PlatformSelectionDlg</field>
+      </row>
+    </table>
+  </section>
+  <section type="fragment" xmlns="http://schemas.microsoft.com/wix/2006/objects">
+    <table name="Control">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*7">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Next</field>
+        <field>PushButton</field>
+        <field>236</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUINext)</field>
+        <field>Cancel</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*12">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Cancel</field>
+        <field>PushButton</field>
+        <field>304</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUICancel)</field>
+        <field>Back</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*15">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Back</field>
+        <field>PushButton</field>
+        <field>180</field>
+        <field>244</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUIBack)</field>
+        <field>BannerBitmap</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*19">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>BannerBitmap</field>
+        <field>Bitmap</field>
+        <field>0</field>
+        <field>0</field>
+        <field>370</field>
+        <field>44</field>
+        <field>1</field>
+        <field />
+        <field>!(loc.LicenseAgreementDlgBannerBitmap)</field>
+        <field>edtLicense</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*20">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Title</field>
+        <field>Text</field>
+        <field>19</field>
+        <field>9</field>
+        <field>268</field>
+        <field>8</field>
+        <field>196611</field>
+        <field />
+        <field>{\WixUI_Font_Title}Welcome to the Message Sniffer License and Authentication  screen</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*21">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Description</field>
+        <field>Text</field>
+        <field>25</field>
+        <field>23</field>
+        <field>340</field>
+        <field>14</field>
+        <field>196611</field>
+        <field />
+        <field>Please enter valid License and Authentication to identify yourself</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*22">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>BottomLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>234</field>
+        <field>370</field>
+        <field>2</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*23">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>BannerLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>44</field>
+        <field>370</field>
+        <field>0</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*24">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>txtLicense</field>
+        <field>Text</field>
+        <field>44</field>
+        <field>63</field>
+        <field>110</field>
+        <field>11</field>
+        <field>3</field>
+        <field />
+        <field>Enter License  (8 Characters)</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*25">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>edtLicense</field>
+        <field>Edit</field>
+        <field>46</field>
+        <field>86</field>
+        <field>126</field>
+        <field>15</field>
+        <field>3</field>
+        <field>LICENSEID</field>
+        <field />
+        <field>edtAuth</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*26">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>txtAuth</field>
+        <field>Text</field>
+        <field>203</field>
+        <field>62</field>
+        <field>147</field>
+        <field>14</field>
+        <field>3</field>
+        <field />
+        <field>Enter Authentication  (16 Charaters)</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*27">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>edtAuth</field>
+        <field>Edit</field>
+        <field>204</field>
+        <field>85</field>
+        <field>129</field>
+        <field>15</field>
+        <field>3</field>
+        <field>AUTHENTICATION</field>
+        <field />
+        <field>chkEmailAcctTwin</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*28">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>chkEmailAcctTwin</field>
+        <field>CheckBox</field>
+        <field>26</field>
+        <field>135</field>
+        <field>320</field>
+        <field>25</field>
+        <field>3</field>
+        <field>EMAILACCOUNT</field>
+        <field>Select this if you have email accounts that intentionally receive spam.(This will automatically open file for editing email accounts after install.)</field>
+        <field>chkGatewaysTwin</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*29">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>chkGatewaysTwin</field>
+        <field>CheckBox</field>
+        <field>26</field>
+        <field>164</field>
+        <field>320</field>
+        <field>25</field>
+        <field>3</field>
+        <field>GATEWAY</field>
+        <field>Select this if you have gateways that need to be entered into the Ignore List. ( This will automatically open a file for editing Gateway IP's after install. )</field>
+        <field>Next</field>
+        <field />
+      </row>
+    </table>
+    <table name="ControlEvent">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*8">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Next</field>
+        <field>DoAction</field>
+        <field>ValidteLicenseandAuth</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*9">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>FindingRulebaseDlg</field>
+        <field>IS_LICENSE_AUTH_VALID ~= "Valid"</field>
+        <field>3</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*10">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>LicenseAuthenticationDlg</field>
+        <field>IS_LICENSE_AUTH_VALID &lt;&gt; "Valid"</field>
+        <field>5</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*13">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Cancel</field>
+        <field>SpawnDialog</field>
+        <field>CancelDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*16">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>Back</field>
+        <field>NewDialog</field>
+        <field>PlatformSelectionDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+    </table>
+    <table name="Dialog">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*6">
+        <field>LicenseAuthenticationDlgTwin</field>
+        <field>50</field>
+        <field>50</field>
+        <field>370</field>
+        <field>270</field>
+        <field>7</field>
+        <field>License and Authentication Dialog</field>
+        <field>Next</field>
+        <field>Next</field>
+        <field>Cancel</field>
+      </row>
+    </table>
+    <table name="WixSimpleReference">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*8">
+        <field>CustomAction</field>
+        <field>ValidteLicenseandAuth</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*9">
+        <field>Dialog</field>
+        <field>FindingRulebaseDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*10">
+        <field>Dialog</field>
+        <field>LicenseAuthenticationDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*13">
+        <field>Dialog</field>
+        <field>CancelDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*16">
+        <field>Dialog</field>
+        <field>PlatformSelectionDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*28">
+        <field>CheckBox</field>
+        <field>EMAILACCOUNT</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LicenseAuthenticationDlgTwin.wxs*29">
+        <field>CheckBox</field>
+        <field>GATEWAY</field>
+      </row>
+    </table>
+  </section>
+  <section type="fragment" xmlns="http://schemas.microsoft.com/wix/2006/objects">
+    <table name="Control">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*14">
+        <field>LocatePlatformFolders</field>
+        <field>Next</field>
+        <field>PushButton</field>
+        <field>236</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUINext)</field>
+        <field>Cancel</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*18">
+        <field>LocatePlatformFolders</field>
+        <field>Cancel</field>
+        <field>PushButton</field>
+        <field>304</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUICancel)</field>
+        <field>BannerBitmap</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*22">
+        <field>LocatePlatformFolders</field>
+        <field>BannerBitmap</field>
+        <field>Bitmap</field>
+        <field>0</field>
+        <field>0</field>
+        <field>370</field>
+        <field>44</field>
+        <field>1</field>
+        <field />
+        <field>!(loc.LicenseAgreementDlgBannerBitmap)</field>
+        <field>Back</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*23">
+        <field>LocatePlatformFolders</field>
+        <field>Title</field>
+        <field>Text</field>
+        <field>15</field>
+        <field>6</field>
+        <field>270</field>
+        <field>15</field>
+        <field>196611</field>
+        <field />
+        <field>{\WixUI_Font_Title}Welcome to the Message Sniffer Platforms Screen.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*24">
+        <field>LocatePlatformFolders</field>
+        <field>Description</field>
+        <field>Text</field>
+        <field>25</field>
+        <field>23</field>
+        <field>340</field>
+        <field>15</field>
+        <field>196611</field>
+        <field />
+        <field>Please select the platform you will use with Message Sniffer.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*25">
+        <field>LocatePlatformFolders</field>
+        <field>Back</field>
+        <field>PushButton</field>
+        <field>180</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUIBack)</field>
+        <field>pthPlatformFolder</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*28">
+        <field>LocatePlatformFolders</field>
+        <field>BottomLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>234</field>
+        <field>370</field>
+        <field>0</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*29">
+        <field>LocatePlatformFolders</field>
+        <field>BannerLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>44</field>
+        <field>370</field>
+        <field>0</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*30">
+        <field>LocatePlatformFolders</field>
+        <field>txtDescription</field>
+        <field>Text</field>
+        <field>27</field>
+        <field>60</field>
+        <field>289</field>
+        <field>28</field>
+        <field>7</field>
+        <field />
+        <field>You have chosen to install Sniffer under Declude with an Imail configuration.  You will need to confirm the location of the following items:</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*31">
+        <field>LocatePlatformFolders</field>
+        <field>txtPlatformFound</field>
+        <field>Text</field>
+        <field>27</field>
+        <field>110</field>
+        <field>314</field>
+        <field>20</field>
+        <field>3</field>
+        <field />
+        <field>Imail was found.  Please confirm the folder for Declude's global.cfg file.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*32">
+        <field>LocatePlatformFolders</field>
+        <field>pthPlatformFolder</field>
+        <field>PathEdit</field>
+        <field>30</field>
+        <field>150</field>
+        <field>280</field>
+        <field>15</field>
+        <field>3</field>
+        <field>PLATFORMFOLDER</field>
+        <field />
+        <field>btnPlatformFolderBrowse</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*33">
+        <field>LocatePlatformFolders</field>
+        <field>btnPlatformFolderBrowse</field>
+        <field>PushButton</field>
+        <field>311</field>
+        <field>149</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>...</field>
+        <field>pthSNFInstallFolder</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*40">
+        <field>LocatePlatformFolders</field>
+        <field>pthSNFInstallFolder</field>
+        <field>PathEdit</field>
+        <field>30</field>
+        <field>199</field>
+        <field>280</field>
+        <field>15</field>
+        <field>3</field>
+        <field>INSTALLFOLDER</field>
+        <field />
+        <field>btnSNFInstallFolderBrowse</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*41">
+        <field>LocatePlatformFolders</field>
+        <field>btnSNFInstallFolderBrowse</field>
+        <field>PushButton</field>
+        <field>311</field>
+        <field>197</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>...</field>
+        <field>Next</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*45">
+        <field>LocatePlatformFolders</field>
+        <field>txtSNFInstallDir</field>
+        <field>Text</field>
+        <field>27</field>
+        <field>180</field>
+        <field>332</field>
+        <field>10</field>
+        <field>3</field>
+        <field />
+        <field>Please confirm/locate the folder you wish Message Sniffer to be installed in.</field>
+        <field />
+        <field />
+      </row>
+    </table>
+    <table name="ControlEvent">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*16">
+        <field>LocatePlatformFolders</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>InstallDirDlg</field>
+        <field>5</field>
+        <field>10</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*19">
+        <field>LocatePlatformFolders</field>
+        <field>Cancel</field>
+        <field>SpawnDialog</field>
+        <field>CancelDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*26">
+        <field>LocatePlatformFolders</field>
+        <field>Back</field>
+        <field>NewDialog</field>
+        <field>InstallDirDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*35">
+        <field>LocatePlatformFolders</field>
+        <field>btnPlatformFolderBrowse</field>
+        <field>[_BrowseProperty]</field>
+        <field>PLATFORMFOLDER</field>
+        <field>1</field>
+        <field>2</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*36">
+        <field>LocatePlatformFolders</field>
+        <field>btnPlatformFolderBrowse</field>
+        <field>SpawnDialog</field>
+        <field>BrowseDlg</field>
+        <field>1</field>
+        <field>3</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*42">
+        <field>LocatePlatformFolders</field>
+        <field>btnSNFInstallFolderBrowse</field>
+        <field>[_BrowseProperty]</field>
+        <field>INSTALLFOLDER</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*43">
+        <field>LocatePlatformFolders</field>
+        <field>btnSNFInstallFolderBrowse</field>
+        <field>SpawnDialog</field>
+        <field>BrowseDlg</field>
+        <field>1</field>
+        <field>5</field>
+      </row>
+    </table>
+    <table name="Dialog">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*13">
+        <field>LocatePlatformFolders</field>
+        <field>50</field>
+        <field>50</field>
+        <field>370</field>
+        <field>270</field>
+        <field>7</field>
+        <field>Platform Selection dialog</field>
+        <field>Next</field>
+        <field>Next</field>
+        <field>Cancel</field>
+      </row>
+    </table>
+    <table name="WixSimpleReference">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*16">
+        <field>Dialog</field>
+        <field>InstallDirDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*19">
+        <field>Dialog</field>
+        <field>CancelDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*26">
+        <field>Dialog</field>
+        <field>InstallDirDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*36">
+        <field>Dialog</field>
+        <field>BrowseDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\LocatePlatformFolders.wxs*43">
+        <field>Dialog</field>
+        <field>BrowseDlg</field>
+      </row>
+    </table>
+  </section>
+  <section type="fragment" xmlns="http://schemas.microsoft.com/wix/2006/objects">
+    <table name="Control">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*14">
+        <field>PlatformSelectionDlg</field>
+        <field>Next</field>
+        <field>PushButton</field>
+        <field>236</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUINext)</field>
+        <field>Cancel</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*19">
+        <field>PlatformSelectionDlg</field>
+        <field>Cancel</field>
+        <field>PushButton</field>
+        <field>304</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUICancel)</field>
+        <field>BannerBitmap</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*23">
+        <field>PlatformSelectionDlg</field>
+        <field>BannerBitmap</field>
+        <field>Bitmap</field>
+        <field>0</field>
+        <field>0</field>
+        <field>370</field>
+        <field>44</field>
+        <field>1</field>
+        <field />
+        <field>!(loc.LicenseAgreementDlgBannerBitmap)</field>
+        <field>Back</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*24">
+        <field>PlatformSelectionDlg</field>
+        <field>Title</field>
+        <field>Text</field>
+        <field>15</field>
+        <field>6</field>
+        <field>270</field>
+        <field>15</field>
+        <field>196611</field>
+        <field />
+        <field>{\WixUI_Font_Title}Welcome to the Message Sniffer Platforms Screen.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*25">
+        <field>PlatformSelectionDlg</field>
+        <field>Description</field>
+        <field>Text</field>
+        <field>25</field>
+        <field>23</field>
+        <field>340</field>
+        <field>15</field>
+        <field>196611</field>
+        <field />
+        <field>Please select the platform you will use with Message Sniffer.</field>
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*26">
+        <field>PlatformSelectionDlg</field>
+        <field>Back</field>
+        <field>PushButton</field>
+        <field>180</field>
+        <field>243</field>
+        <field>56</field>
+        <field>17</field>
+        <field>3</field>
+        <field />
+        <field>!(loc.WixUIBack)</field>
+        <field>lstPlatforms</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*30">
+        <field>PlatformSelectionDlg</field>
+        <field>BottomLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>234</field>
+        <field>370</field>
+        <field>0</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*31">
+        <field>PlatformSelectionDlg</field>
+        <field>BannerLine</field>
+        <field>Line</field>
+        <field>0</field>
+        <field>44</field>
+        <field>370</field>
+        <field>0</field>
+        <field>1</field>
+        <field />
+        <field />
+        <field />
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*32">
+        <field>PlatformSelectionDlg</field>
+        <field>lstPlatforms</field>
+        <field>ListBox</field>
+        <field>173</field>
+        <field>66</field>
+        <field>160</field>
+        <field>140</field>
+        <field>65539</field>
+        <field>SELECTEDPLATFORM</field>
+        <field />
+        <field>Next</field>
+        <field />
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*51">
+        <field>PlatformSelectionDlg</field>
+        <field>txtDescription</field>
+        <field>Text</field>
+        <field>10</field>
+        <field>72</field>
+        <field>152</field>
+        <field>24</field>
+        <field>3</field>
+        <field />
+        <field>Please sekect from these available platforms:</field>
+        <field />
+        <field />
+      </row>
+    </table>
+    <table name="ControlEvent">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*17">
+        <field>PlatformSelectionDlg</field>
+        <field>Next</field>
+        <field>NewDialog</field>
+        <field>LocatePlatformFolders</field>
+        <field>1</field>
+        <field>5</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*20">
+        <field>PlatformSelectionDlg</field>
+        <field>Cancel</field>
+        <field>SpawnDialog</field>
+        <field>CancelDlg</field>
+        <field>1</field>
+        <field>1</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*27">
+        <field>PlatformSelectionDlg</field>
+        <field>Back</field>
+        <field>NewDialog</field>
+        <field>LocatePlatformFolders</field>
+        <field>1</field>
+        <field>5</field>
+      </row>
+    </table>
+    <table name="Dialog">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*13">
+        <field>PlatformSelectionDlg</field>
+        <field>50</field>
+        <field>50</field>
+        <field>370</field>
+        <field>270</field>
+        <field>7</field>
+        <field>Platform Selection dialog</field>
+        <field>Next</field>
+        <field>Next</field>
+        <field>Cancel</field>
+      </row>
+    </table>
+    <table name="WixSimpleReference">
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*17">
+        <field>Dialog</field>
+        <field>LocatePlatformFolders</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*20">
+        <field>Dialog</field>
+        <field>CancelDlg</field>
+      </row>
+      <row sourceLineNumber="D:\Linda\SNFSetup\SNF_CS_Installer.Setup\SNF_CS_Installer.Setup\Dialogs\PlatformSelectionDlg.wxs*27">
+        <field>Dialog</field>
+        <field>LocatePlatformFolders</field>
+      </row>
+    </table>
+  </section>
+</wixLibrary>

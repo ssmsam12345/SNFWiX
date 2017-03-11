@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Message Sniffer Server Installer" Language="1033" Version="3.3.0.0" Manufacturer="ARM Research LLC" UpgradeCode="869f3259-fb5a-476c-b39d-4702dc7d949c">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"  InstallPrivileges="elevated" />
+    <Condition Message="This product require 64 bit">VersionNT64</Condition>
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." Schedule="afterInstallInitialize"/>
+		<MediaTemplate  EmbedCab="yes" CompressionLevel="high"/>
+
+		<Feature Id="ProductFeature" Title="SNF_CS_Installer.Setup" Level="1">
+			<!--<ComponentGroupRef Id="ProductComponents" />-->
+      <ComponentGroupRef Id="SNFComponents"/>
+      <ComponentRef Id="AddLineTo_XYNTService.ini"/>
+      <ComponentRef Id="XMLChanges"/>
+      <ComponentRef Id="Shortcuts"/>
+		</Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER"/>
+    <PropertyRef Id="PropsRef"/>
+    <UIRef Id="SNFUI_InstallDir"/>
+    <SetDirectory Id="PLATFORMFOLDER" Value="C:\temp"/>
+    <WixVariable Id="WixUILicenseRtf" Value="SourceFiles\License.rtf"/>
+    <WixVariable Id="WixUIDialogBmp" Value="Bitmaps\SnifferBanner.bmp"/>
+      
+   <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+          <Directory Id="INSTALLFOLDER" Name="SNF" />
+      </Directory>
+     <Directory Id="PLATFORMFOLDER"/>
+     <Directory Id="SystemFolder"/>
+     <Directory Id="ProgramMenuFolder">
+       <Directory Id="MessageSniffer" Name="MessageSniffer"/>
+     </Directory>
+   </Directory>
+
+
+    <Binary Id="SNFSetupCA" SourceFile="$(var.SNFSetupCA.TargetDir)$(var.SNFSetupCA.TargetName).CA.dll"/>
+    <Binary Id="Curl.exe" SourceFile="SourceFiles\curl.exe"/>
+    <!--<InstanceTransforms Property="ProductCode">
+      <Instance Id="transform1" ProductCode="{B1ACCBCA-C760-4816-BC21-40D717A7B4D5}" ProductName="IT1" UpgradeCode="{A106434D-87BB-439F-AA33-D61E1CC26B39}"/>
+    </InstanceTransforms>-->
+    <EnsureTable Id="ListBox"/>
+
+    
+    <PropertyRef Id="RegistrySearch"/>
+    <PropertyRef Id="FragmentReferences"/>
+    <!--<SetProperty Id="session["PLATFORMFOUND_TEXT"]" Value="Other" Sequence="first" After="CostFinalize"/>-->
+    <SetProperty Id="SELECTEDPLATFORM" Value="OTHER" Sequence="ui" After="AppSearch"/> 
+    <SetProperty Id="XYNTSERVICEEXEPATH" Value="[#XYNTService.exe]" After="CostFinalize" Sequence="both"/>
+    <SetProperty Id="SearchAndReplace" Value="GetRulebaseCmdFile=[#getRulebase.cmd];INSTALLDIR=[INSTALLFOLDER];AUTHENTICATION=[AUTHENTICATION];LICENSEID=[LICENSEID]" After="SetXYNTSERVICEEXEPATH" Sequence="both"/>
+    <SetProperty Id="WixShellExecTarget" Value="&quot;[#GBUdbIgnoreList.txt]&quot;"  After="SetSearchAndReplace" Sequence="both"/>
+    <SetProperty Id="DownloadRulebase" Value="CURLPATH=[#curl.exe];LICENSEID=[LICENSEID]" After="SetWixShellExecTarget" Sequence="both"/>
+    
+    <InstallUISequence>
+      <Custom Action="CheckInternetConnectionCA" After="AppSearch">NOT (REMOVE ~= "ALL")</Custom>
+      <Custom Action="StopSNFService"  After="SetSearchAndReplace">REMOVE ~= "ALL" OR UPGRADINGPRODUCTCODE</Custom>
+      <Custom Action="InsertPlatforms" After="CostFinalize">NOT Installed</Custom>
+      <!--<Custom Action="DownloadRulebase" After="InsertPlatforms">NOT Installed</Custom>-->
+    </InstallUISequence>
+
+    <InstallExecuteSequence>
+      <Custom Action="CheckInternetConnectionCA" After="AppSearch">NOT (REMOVE ~= "ALL")</Custom>
+      <Custom Action="DownloadRulebase" After="InstallFiles">NOT Installed</Custom>
+      <Custom Action="InstallSNFService" After="DownloadRulebase">NOT Installed</Custom>
+      <Custom Action="UninstallSNFService" After="RemoveDuplicateFiles">REMOVE ~= "ALL"</Custom>
+      <Custom Action="StartSNFService" After="InstallSNFService">NOT REMOVE ~= "ALL"</Custom>
+      <Custom Action="StopSNFService"  After="SetSearchAndReplace">REMOVE ~= "ALL" OR UPGRADINGPRODUCTCODE</Custom>
+    </InstallExecuteSequence>
+    
+    
+    
+	</Product>
+
+	
+
+	
+</Wix>

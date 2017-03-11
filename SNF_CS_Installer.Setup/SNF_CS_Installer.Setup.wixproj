@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>7dcebe35-a7e7-45a0-a30f-4388880b1a94</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>SNFSetup</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+    <LinkerAdditionalOptions>-cc D:\Temp -reusecab</LinkerAdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App Search\Registry Search.wxs" />
+    <Compile Include="Components\SNFComponents.wxs" />
+    <Compile Include="Custom Actions\CustomActions.wxs" />
+    <Compile Include="Dialogs\FindingRulebaseDlg.wxs" />
+    <Compile Include="Dialogs\LicenseAuthenticationDlg.wxs" />
+    <Compile Include="Dialogs\LicenseAuthenticationDlgTwin.wxs" />
+    <Compile Include="Dialogs\LocatePlatformFolders.wxs" />
+    <Compile Include="Dialogs\PlatformSelectionDlg.wxs" />
+    <Compile Include="Fragment References\Fragment References.wxs" />
+    <Compile Include="IniFile Changes\IniFile Changes.wxs" />
+    <Compile Include="Product.wxs" />
+    <Compile Include="Properties\Properties.wxs" />
+    <Compile Include="Registry\Registry.wxs" />
+    <Compile Include="Shortcuts\Shortcuts.wxs" />
+    <Compile Include="UI Set\SNFUI_InstallDir.wxs" />
+    <Compile Include="XML Files changes\XML Files Changes.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="Dialogs" />
+    <Folder Include="App Search" />
+    <Folder Include="Bitmaps" />
+    <Folder Include="Components" />
+    <Folder Include="Custom Actions" />
+    <Folder Include="IniFile Changes" />
+    <Folder Include="Fragment References" />
+    <Folder Include="Registry" />
+    <Folder Include="XML Files changes" />
+    <Folder Include="Shortcuts" />
+    <Folder Include="SourceFiles\" />
+    <Folder Include="UI Set" />
+    <Folder Include="Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SNFSetup.wixpdb" />
+    <Content Include="SourceFiles\ChangeLog.txt" />
+    <Content Include="SourceFiles\curl.exe" />
+    <Content Include="SourceFiles\CURLMANUAL.rtf" />
+    <Content Include="SourceFiles\CURLREADME.rtf" />
+    <Content Include="SourceFiles\exchndl.dll" />
+    <Content Include="SourceFiles\GBUdbIgnoreList.txt" />
+    <Content Include="SourceFiles\getRulebase.cmd" />
+    <Content Include="SourceFiles\getRulebase.txt" />
+    <Content Include="SourceFiles\identity.xml" />
+    <Content Include="SourceFiles\InstallInstructions.txt" />
+    <Content Include="SourceFiles\License.txt" />
+    <Content Include="SourceFiles\LocalRoot.txt" />
+    <Content Include="SourceFiles\mingwm10.dll" />
+    <Content Include="SourceFiles\send_shutdown.cmd" />
+    <Content Include="SourceFiles\snf2check.exe" />
+    <Content Include="SourceFiles\SNFClient.exe" />
+    <Content Include="SourceFiles\SNFClient_readme.txt" />
+    <Content Include="SourceFiles\SNFServer.exe" />
+    <Content Include="SourceFiles\SNFServerV3.2.0-E3.2.0.exe" />
+    <Content Include="SourceFiles\SNFServer_readme.txt" />
+    <Content Include="SourceFiles\snf_engine.xml" />
+    <Content Include="SourceFiles\snf_xci.xml" />
+    <Content Include="SourceFiles\XYNTService.exe" />
+    <Content Include="SourceFiles\XYNTService.ini" />
+    <Content Include="SourceFiles\XYNTServiceReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SNFSetupCA\SNFSetupCA.csproj">
+      <Name>SNFSetupCA</Name>
+      <Project>{46929b70-66f4-4730-b0ed-cdcc951296fd}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <PropertyGroup>
+    <PostBuildEvent>msiexec /i "$(TargetDir)$(TargetFileName)" /l%2avx "$(TargetDir)$(TargetFileName).log"</PostBuildEvent>
+  </PropertyGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
