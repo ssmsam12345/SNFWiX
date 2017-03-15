@@ -9,7 +9,7 @@
         <Shortcut Id="UninstallSNF" Name="Uninstall" Description="Uninstalls Message Sniffer Completely" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]"/>
         <Shortcut Id="GBUdbIgnoreList" Target="[#GBUdbIgnoreList.txt]" WorkingDirectory="INSTALLFOLDER" Show="normal" Name="GBUdbIgnoreList"/>
         <RemoveFolder Id="RemoveShortcutFolder" On="uninstall"/>
-        <RegistryValue Root="HKCU" Key="Software\microneil\MessageSniffer" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+        <RegistryValue Root="HKCU" Key="Software\Microneil\MessageSniffer" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
       </Component>
     </DirectoryRef>
 	</Fragment>

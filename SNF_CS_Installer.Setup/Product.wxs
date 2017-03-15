@@ -50,21 +50,7 @@
     <SetProperty Id="WixShellExecTarget" Value="&quot;[#GBUdbIgnoreList.txt]&quot;"  After="SetSearchAndReplace" Sequence="both"/>
     <SetProperty Id="DownloadRulebase" Value="CURLPATH=[#curl.exe];LICENSEID=[LICENSEID]" After="SetWixShellExecTarget" Sequence="both"/>
     
-    <InstallUISequence>
-      <Custom Action="CheckInternetConnectionCA" After="AppSearch">NOT (REMOVE ~= "ALL")</Custom>
-      <Custom Action="StopSNFService"  After="SetSearchAndReplace">REMOVE ~= "ALL" OR UPGRADINGPRODUCTCODE</Custom>
-      <Custom Action="InsertPlatforms" After="CostFinalize">NOT Installed</Custom>
-      <!--<Custom Action="DownloadRulebase" After="InsertPlatforms">NOT Installed</Custom>-->
-    </InstallUISequence>
-
-    <InstallExecuteSequence>
-      <Custom Action="CheckInternetConnectionCA" After="AppSearch">NOT (REMOVE ~= "ALL")</Custom>
-      <Custom Action="DownloadRulebase" After="InstallFiles">NOT Installed</Custom>
-      <Custom Action="InstallSNFService" After="DownloadRulebase">NOT Installed</Custom>
-      <Custom Action="UninstallSNFService" After="RemoveDuplicateFiles">REMOVE ~= "ALL"</Custom>
-      <Custom Action="StartSNFService" After="InstallSNFService">NOT REMOVE ~= "ALL"</Custom>
-      <Custom Action="StopSNFService"  After="SetSearchAndReplace">REMOVE ~= "ALL" OR UPGRADINGPRODUCTCODE</Custom>
-    </InstallExecuteSequence>
+    
     
     
     

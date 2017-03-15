@@ -1,7 +1,45 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Fragment>
-		<!-- TODO: Put your code here. -->
+		
     <Property Id="RegistrySearch" Value="0"/>
+    
+    <!--
+    First determine mail platforms.
+    -->
+    
+    <Property Id="ISIMAILINSTALLED" Secure="yes">
+      <RegistrySearch Id='ISIMAILINSTALLED' Type='directory' Root='HKLM' Key='SOFTWARE\Ipswitch\Imail\Global' Name='TopDir'>
+        <DirectorySearch Id='IMailInstallFolder' Path='[ISIMAILINSTALLED]' AssignToProperty='yes'></DirectorySearch>
+      </RegistrySearch>
+    </Property>
+    
+    <Property Id="ISSMARTERMAILINSTALLED" Secure="yes">
+      <RegistrySearch Id="ISSMARTERMAILINSTALLED" Root="HKLM" Key="SOFTWARE\SmarterTools\SmarterMail" Name="InstallPath" Type="directory">
+        <DirectorySearch Id="SearchSmartermailDir" Path="[ISSMARTERMAILINSTALLED]" AssignToProperty="yes"/>
+                         
+      </RegistrySearch>
+    </Property>
+    
+    <Property Id="ISALLIGATEINSTALLED" Secure="yes">
+      <RegistrySearch Id="ISALLIGATEINSTALLED" Root="HKLM" Key="SOFTWARE\SolidOak\Alligate\Settings" Name="InstallDir" Type="directory" />
+    </Property>
+    
+    <!--
+    
+     Now determine implementation platforms.
+    -->
+    <Property Id="DECLUDE_INSTALL_FOLDER" Secure="yes">
+      <RegistrySearch Id="IS_DECLUDE_INSTALLED" Root="HKLM" Key="SOFTWARE\ComputerizedHorizons" Name="RootMailPath" Type="directory" >
+        <DirectorySearch Id="RootMailPath" Path="[DECLUDE_INSTALL_FOLDER]declude" AssignToProperty="yes"/>
+      </RegistrySearch>
+        
+    </Property>
+    
+    <Property Id="MINIMIINSTALLFOLDER" Secure="yes">
+      <RegistrySearch Id="MINIMIINSTALLFOLDER" Root="HKLM" Key="SOFTWARE\Ipswitch\IMail\Global" Name="TopDir" Type="directory"/>
+    </Property>
+    
+    
     <Property Id="ISICEWARPINSTALLED" Value="0">
       <RegistrySearch Id="ISICEWARPINSTALLED" Root="HKLM" Key="SOFTWARE\IceWarp\Merak Mail Server" Name="InstallDir" Type="directory"/>
     </Property>
@@ -9,19 +47,11 @@
       <RegistrySearch Id="isMDaemonInstalled" Root="HKLM" Key="SOFTWARE\Alt-N Technologies\MDaemon" Name="AppPath" Type="directory" />
     </Property>-->
 
-    <Property Id="ISIMAILINSTALLED" Secure="yes">
-      <RegistrySearch Id='ISIMAILINSTALLED' Type='directory' Root='HKLM' Key='SOFTWARE\Ipswitch\Imail\Global' Name='TopDir'>
-        <DirectorySearch Id='IMailInstallFolder' Path='[ISIMAILINSTALLED]' AssignToProperty='yes'></DirectorySearch>
-      </RegistrySearch>
-    </Property>
+    
 
-    <Property Id="ISSMARTERMAILINSTALLED" Secure="yes">
-      <RegistrySearch Id="ISSMARTERMAILINSTALLED" Root="HKLM" Key="SOFTWARE\SmarterTools\SmarterMail" Name="InstallPath" Type="directory" />
-    </Property>
+    
 
-    <Property Id="ISALLIGATEINSTALLED" Secure="yes">
-      <RegistrySearch Id="ISALLIGATEINSTALLED" Root="HKLM" Key="SOFTWARE\SolidOak\Alligate\Settings" Name="InstallDir" Type="directory" />
-    </Property>
+    
 
     <!--<Property Id="DECLUDEINSTALLFOLDER" Secure="yes">
       <RegistrySearch Id="DECLUDEINSTALLFOLDER" Root="HKLM" Key="SOFTWARE\ComputerizedHorizons" Name="RootMailPath" Type="directory">
@@ -35,21 +65,14 @@
       <RegistrySearch Id="SENDNAMEVALUE" Root="HKLM" Key="SOFTWARE\Ipswitch\IMail\Global" Name="SendName"  Type="raw" />
     </Property>
 
-    <Property Id="MINIMIINSTALLFOLDER" Secure="yes">
-      <RegistrySearch Id="MINIMIINSTALLFOLDER" Root="HKLM" Key="SOFTWARE\Ipswitch\IMail\Global" Name="TopDir" Type="directory"/>
-    </Property>
+    
     
     <!--<Property Id="MDAEMONINSTALLFOLDER" Secure="yes">
       <RegistrySearch Id="MDAEMONINSTALLFOLDER" Root="HKLM" Key="SOFTWARE\Alt-N Technologies\MDaemon" Name="AppPath" Type="directory">
         <DirectorySearch Id="MDAEMONINSTALLFOLDER" Path="[MDAEMONINSTALLFOLDER]"/>
       </RegistrySearch>
     </Property>-->
-    <Property Id="DECLUDE_INSTALL_FOLDER" Secure="yes">
-      <RegistrySearch Id="IS_DECLUDE_INSTALLED" Root="HKLM" Key="SOFTWARE\ComputerizedHorizons" Name="RootMailPath" Type="directory" >
-        <DirectorySearch Id="RootMailPath" Path="[DECLUDE_INSTALL_FOLDER]declude" AssignToProperty="yes"/>
-      </RegistrySearch>
-        
-    </Property>
+    
     
 	</Fragment>
 </Wix>

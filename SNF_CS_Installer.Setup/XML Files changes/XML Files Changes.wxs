@@ -8,11 +8,12 @@
         <util:XmlFile Id="licenseid" Action="setValue" File="[#identity.xml]" ElementPath="snf/identity" Name="licenseid" Value="[LICENSEID]"  PreserveModifiedDate="yes" SelectionLanguage="XPath"/>
         <util:XmlFile Id="Authentication" File="[#identity.xml]" ElementPath="snf/identity" Action="setValue" Name="authentication" Value="[AUTHENTICATION]" PreserveModifiedDate="yes"  SelectionLanguage="XPath"/>
 
-        <util:XmlFile Id="node" File="[#snf_engine.xml]" ElementPath="snf/node" Action="setValue" Name="identity" Value="[INSTALLFOLDER]" PreserveModifiedDate="yes" SelectionLanguage="XPath"/>
-        <util:XmlFile Id="path" File="[#snf_engine.xml]" ElementPath="snf/node/paths" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
-        <util:XmlFile Id="log" File="[#snf_engine.xml]" ElementPath="snf/node/paths/log" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
-        <util:XmlFile Id="rulebase" File="[#snf_engine.xml]" ElementPath="snf/node/paths/rulebase" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
-        <util:XmlFile Id="workspace" File="[#snf_engine.xml]" ElementPath="snf/node/paths/workspace" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="identity" File="[#snf_engine.xml]" ElementPath="//snf/node" Action="setValue" Name="identity" Value="[#snf_engine.xml]" PreserveModifiedDate="yes" SelectionLanguage="XPath"/>
+        <!--<util:XmlFile Id="path" File="[#snf_engine.xml]" ElementPath="snf/node/paths" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>-->
+        <util:XmlFile Id="log" File="[#snf_engine.xml]" ElementPath="//snf/node/paths/log" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="rulebase" File="[#snf_engine.xml]" ElementPath="//snf/node/paths/rulebase" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="workspace" File="[#snf_engine.xml]" ElementPath="//snf/node/paths/workspace" Action="setValue" Name="path" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[INSTALLFOLDER]"/>
+        <util:XmlFile Id="update_script" File="[#snf_engine.xml]" ElementPath="//snf/node/network/update-script" Action="setValue" Name="call" SelectionLanguage="XPath"  PreserveModifiedDate="yes" Value="[#getRulebase.cmd]"/>
         
       </Component>
     </DirectoryRef>
