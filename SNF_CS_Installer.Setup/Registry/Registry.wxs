@@ -2,5 +2,15 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Fragment>
 		<!-- TODO: Put your code here. -->
+    <Property Id="RegistryEntries" Value="1"/>
+    <ComponentGroup Id="Registry" Directory="INSTALLFOLDER">
+      <Component Id="WriteREgistry" Guid="{A0A0F3C6-6C7D-44F2-8BA0-177BBEA7A459}" KeyPath="yes">
+        <RegistryKey Id="MessageSniffer" Root="HKLM" Key="Software\MessageSniffer" Action="createAndRemoveOnUninstall">
+          <RegistryValue Id="InstallDir" Name="Install_Dir" Value="[INSTALLFOLDER]" Type="string"/>
+          <RegistryValue Id="SNFMailServerDir" Name="SNFMailServer_DIR" Value="[INSTALLFOLDERROOT]" Type="string"/>
+        </RegistryKey>
+      </Component>
+    </ComponentGroup>
+    
 	</Fragment>
 </Wix>

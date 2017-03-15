@@ -5,5 +5,7 @@
     <Property Id="FragmentReferences" Value="0"/>
 
     <PropertyRef Id="XMLFILECHANGES"/>
+    <PropertyRef Id="RegistryEntries"/>
+    <PropertyRef Id="CUSTOM_ACTION_SEQUENCES"/>
 	</Fragment>
 </Wix>

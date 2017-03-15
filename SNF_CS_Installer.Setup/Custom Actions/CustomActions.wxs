@@ -29,7 +29,7 @@
 	</Fragment>
 
   <Fragment>
-    <Property Id="UI_EXECUTE_SEQUENCES" Value="1"/>
+    <Property Id="CUSTOM_ACTION_SEQUENCES" Value="1"/>
     <InstallUISequence>
       <Custom Action="CheckInternetConnectionCA" After="AppSearch">NOT (REMOVE ~= "ALL")</Custom>
       <Custom Action="StopSNFService"  After="SetSearchAndReplace">REMOVE ~= "ALL" OR UPGRADINGPRODUCTCODE</Custom>
