@@ -1,3 +1,0 @@
-Running SNF getRulebase.cmd 
-No UpdateReady.txt 
-Done 
